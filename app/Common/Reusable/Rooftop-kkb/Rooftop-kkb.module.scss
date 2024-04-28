@@ -1,0 +1,92 @@
+@import "../../../variables.scss";
+
+.rooftop {
+   margin: $marginSection;
+   &__container {
+      position: relative;
+      z-index: 3;
+   }
+   &__title {
+      @include textTitle1;
+      color: $darkBlueColor;
+   }
+   &__previewContainer {
+      display: flex;
+      justify-content: space-between;
+   }
+   &__imgBody {
+      margin: 30px 0 0 0;
+      position: relative;
+      max-width: 400px;
+      width: 100%;
+      aspect-ratio: 2/2;
+   }
+   &__description {
+      & p {
+         @include textStyle1;
+      }
+   }
+   &__advantages {
+      margin: 80px 0 0 0;
+      font-size: 24px;
+      color: rgb(0, 5, 51);
+   }
+   &__mainParams {
+      max-width: 500px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      &__imgBody {
+         margin: 0 auto;
+         position: relative;
+         width: 200px;
+         height: 100px;
+      }
+      &__title {
+         margin: 15px 0 0 0;
+         font-size: 32px;
+         color: rgb(0, 5, 51);
+         font-weight: 600;
+      }
+      &__subtitle {
+         margin: 15px 0 0 0;
+         font-weight: 300;
+         color: rgb(0, 5, 51);
+         line-height: 140%;
+      }
+   }
+   &__advantageContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 120px;
+   }
+}
+.advantage {
+   display: flex;
+   gap: 40px;
+   &__odd {
+      flex-direction: row-reverse;
+   }
+   &__imgBody {
+      position: relative;
+      max-width: 600px;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 3/2;
+      border-radius: 10px;
+      overflow: hidden;
+   }
+   &__descriptionBody {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 15px;
+      & li {
+         @include textStyle1;
+         font-size: 15px;
+      }
+   }
+   &:first-child {
+      margin: 60px 0 0 0;
+   }
+}

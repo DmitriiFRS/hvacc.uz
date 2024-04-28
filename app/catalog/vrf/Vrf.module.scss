@@ -1,0 +1,64 @@
+@import "../../variables.scss";
+
+.vrf {
+   margin: 140px 0 20px 0;
+   &__title {
+      @include textTitle1;
+   }
+   &__body {
+      margin: 60px 0 0 0;
+      display: grid;
+      gap: 60px;
+      grid-template-columns: 1fr 1fr;
+      @media (max-width: 700px) {
+         gap: 20px;
+      }
+      @media (max-width: 450px) {
+         grid-template-columns: 1fr;
+      }
+   }
+   &__item {
+      flex: 0 1 50%;
+      padding: 20px;
+      box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+      display: flex;
+      gap: 30px;
+      flex-direction: column;
+      align-items: center;
+      transition: 0.25s;
+      border-radius: 12px;
+      @media (max-width: 600px) {
+         padding: 10px;
+      }
+      &:hover .vrf__imgBody {
+         transform: scale(1.1);
+      }
+      &:hover {
+         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px 0px;
+      }
+   }
+
+   &__imgBody {
+      position: relative;
+      max-width: 250px;
+      width: 100%;
+      aspect-ratio: 1/1;
+      transition: 0.25s;
+      @media (max-width: 870px) {
+         max-width: 180px;
+      }
+      @media (max-width: 600px) {
+         max-width: 140px;
+      }
+   }
+   &__itemTitle {
+      @include textStyle1;
+      font-size: 24px;
+      @media (max-width: 600px) {
+         font-size: 18px;
+      }
+   }
+}
+.vrfouter {
+   margin: 140px 0 20px 0;
+}

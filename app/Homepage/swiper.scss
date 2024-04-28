@@ -1,0 +1,14 @@
+.swiper-pagination {
+   display: block;
+   background: #225560;
+   width: 100%;
+   height: 30px;
+   display: flex;
+}
+.swiper-pagination-bullet {
+   display: block;
+   background: #fa0000;
+   width: 30px;
+   height: 30px;
+   border-radius: 50%;
+}

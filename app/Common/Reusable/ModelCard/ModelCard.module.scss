@@ -1,0 +1,128 @@
+@import "../../../variables.scss";
+
+.model {
+   margin: $marginSection;
+   &__body {
+      margin: 40px 0 0 0;
+      display: flex;
+      flex-direction: column;
+   }
+   &__title {
+      font-size: 20px;
+      color: rgb(0, 5, 51);
+      line-height: 130%;
+   }
+   &__model {
+      margin: 20px 0 0 0;
+      font-size: 26px;
+      color: rgb(0, 5, 51);
+      font-weight: 600;
+      @media (max-width: 400px) {
+         font-size: 20px;
+      }
+   }
+   &__header {
+      margin: 60px 0 0 0;
+      display: flex;
+      justify-content: space-between;
+      font-size: 20px;
+      color: rgb(0, 5, 51);
+      &__price {
+         flex: 1 1 50%;
+         gap: 20px;
+         & span {
+            font-weight: 500;
+         }
+      }
+      &__params {
+         font-weight: 600;
+         font-size: 24px;
+         flex: 0 1 50%;
+         @media (max-width: 650) {
+            text-align: center;
+            flex: 1 1 auto;
+         }
+      }
+      @media (max-width: 650px) {
+         flex-direction: column;
+         align-items: center;
+      }
+   }
+   &__main {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      margin: 40px 0 0 0;
+      @media (max-width: 650px) {
+         flex-direction: column;
+      }
+   }
+   &__leftSide {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      overflow: hidden;
+      flex: 0 1 50%;
+   }
+   &__rightSide {
+      flex: 0 1 50%;
+   }
+   &__imgBody {
+      position: relative;
+      height: 400px;
+      width: 100%;
+      aspect-ratio: 5/2;
+      flex: 0 1 50%;
+   }
+}
+.table {
+   flex: 0 1 50%;
+   padding: 25px 15px;
+   box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+   border-radius: 10px;
+   &__item {
+      color: $grayColor;
+      font-size: 16px;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid rgb(224, 224, 224);
+      padding: 5px 0;
+      gap: 10px;
+      &:not(:last-child) {
+         margin: 0 0 10px 0;
+      }
+      @media (max-width: 400px) {
+         font-size: 12px;
+      }
+   }
+   &__title {
+      flex: 0 1 60%;
+      line-height: 140%;
+   }
+   &__param {
+      flex: 0 1 40%;
+      text-align: right;
+      font-weight: 500;
+      &__reducedFz {
+         font-size: 12px;
+         @media (max-width: 600px) {
+            margin: 0 -15px 0 0;
+            font-size: 10px;
+         }
+      }
+   }
+}
+.mainParams {
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   gap: 40px;
+   &__icon {
+      @include itemcard-mainparam;
+      font-size: 30px;
+   }
+   &__title {
+      margin: 15px 0 0 0;
+      color: $grayColor;
+   }
+}

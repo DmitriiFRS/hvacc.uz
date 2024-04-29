@@ -15,7 +15,7 @@ function Message() {
       setOpen(!isOpen);
    }
    return (
-      <div className={styles.message}>
+      <div aria-label="message-form" className={styles.message}>
          <div className={styles.message__container}>
             {isOpen && <MessageForm isOpen={isOpen} setOpen={setOpen} setModal={setModal} />}
             {isModal && <SubmitForm isModal={isModal} setModal={setModal} />}
@@ -27,4 +27,3 @@ function Message() {
    );
 }
 export default Message;
-//onClick={() => setOpen(!isOpen)}

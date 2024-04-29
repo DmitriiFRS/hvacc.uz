@@ -41,10 +41,10 @@ function NewProducts() {
             }}
             modules={[Navigation, Pagination]}
          >
-            <button className="new-slider-next">
+            <button aria-label="next-slide" className="new-slider-next">
                <MdNavigateNext />
             </button>
-            <button className="new-slider-prev">
+            <button aria-label="previous-slide" className="new-slider-prev">
                <MdNavigateNext />
             </button>
             <div className="swiper-pagination"></div>

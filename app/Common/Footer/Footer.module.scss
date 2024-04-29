@@ -50,13 +50,16 @@
       margin: 20px 0 0 0;
    }
    &__navLink {
+      display: block;
       margin: 0 0 10px 0;
-      color: #60616b;
+      color: #3f3f3f;
+      font-weight: 500;
    }
    &__navBody {
       display: flex;
       margin: 20px 0 0 0;
-      color: #60616b;
+      color: #3f3f3f;
+      font-weight: 500;
       align-items: center;
    }
    &__phone {
@@ -83,7 +86,7 @@
       font-weight: 600;
       grid-area: service;
       & > * {
-         color: #60616b;
+         color: #3f3f3f;
       }
    }
 }

@@ -25,9 +25,11 @@ function Footer() {
                   <ul className={styles.footer__navList}>
                      {footerNav.map((el) => {
                         return (
-                           <Link style={{ color: "inherit" }} key={el.id} href={el.href}>
-                              <li className={styles.footer__navLink}>{el.name}</li>
-                           </Link>
+                           <li style={{ color: "inherit" }} key={el.id}>
+                              <Link style={{ color: "inherit" }} href={el.href} className={styles.footer__navLink}>
+                                 {el.name}
+                              </Link>
+                           </li>
                         );
                      })}
                   </ul>
@@ -36,24 +38,24 @@ function Footer() {
                   <h4 className={styles.footer__navTitle}>Контакты</h4>
                   <div className={styles.footer__navBody}>
                      <FiPhone size={20} />
-                     <Link target="_blank" href={"tel:+998973336357"} style={{ color: "inherit" }} className={styles.footer__phone}>
+                     <Link aria-label="phone" target="_blank" href={"tel:+998973336357"} style={{ color: "inherit" }} className={styles.footer__phone}>
                         +998(97) 333-63-57{" "}
                      </Link>
                   </div>
                   <div className={styles.footer__navBody}>
                      <AiTwotoneMail size={20} />
-                     <Link target="_blank" href="mailto:mideahvacc@gmail.com" style={{ color: "inherit" }} className={styles.footer__email}>
+                     <Link aria-label="email" target="_blank" href="mailto:mideahvacc@gmail.com" style={{ color: "inherit" }} className={styles.footer__email}>
                         mideahvacc@gmail.com
                      </Link>
                   </div>
                   <div className={styles.footer__iconsBody}>
-                     <Link className={styles.footer__icon} href={"#"}>
+                     <Link className={styles.footer__icon} href={"#"} aria-label="facebook">
                         <FaFacebookF color="#888888" size={35} />
                      </Link>
-                     <Link className={styles.footer__icon} href={"#"}>
+                     <Link className={styles.footer__icon} href={"#"} aria-label="instagram">
                         <CiInstagram color="#888888" size={35} />
                      </Link>
-                     <Link className={styles.footer__icon} href={"#"}>
+                     <Link className={styles.footer__icon} href={"#"} aria-label="telegram">
                         <FaTelegramPlane color="#888888" size={35} />
                      </Link>
                   </div>

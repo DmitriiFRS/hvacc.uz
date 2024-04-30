@@ -19,7 +19,10 @@ function Breadcrumbs() {
             else if (el === "projects") titleRouter.push("Выполненные проекты");
             else if (el === "contacts") titleRouter.push("Контакты");
             else if (el === "air-conditioners") titleRouter.push("Бытовые сплит-системы");
-            else if (el === "semi-industrial") titleRouter.push("Полупромышленные сплит-системы");
+            else if (el === "col-air-conditioners") titleRouter.push("Колонные кондиционеры");
+            else if (el === "duct-air-conditioners") titleRouter.push("Канальные кондиционеры");
+            else if (el === "cassette-air-conditioners") titleRouter.push("Кассетные кондиционеры");
+            else if (el === "multi-split") titleRouter.push("Мульти-сплит системы");
             else if (el === "vrf") titleRouter.push("VRF-Системы");
             else if (el === "outer") titleRouter.push("Наружные блоки VRF");
             else if (el === "mini") titleRouter.push("Мини VRF");

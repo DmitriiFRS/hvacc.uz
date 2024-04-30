@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { useAppSelector } from "../../Common/Hooks/ReduxHooks";
 import Product from "./Product";
-import { DataInner } from "../../catalog/semi-industrial/page";
+import { DataInner } from "./page";
 import styles from "../../Common/Reusable/Reusable.module.scss";
 
 function ProductBody({ data }: { data: DataInner[] }) {

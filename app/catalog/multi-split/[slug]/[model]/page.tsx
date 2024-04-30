@@ -1,9 +1,8 @@
-import { AirCondSemiInner } from "@/app/Common/Data/Equip/AirCond-SemiInd.data";
 import Breadcrumbs from "@/app/Common/Utilities/Breadcrumbs";
 import fetchGraphql from "@/app/Common/Utilities/FetchGraphql";
 import styles from "../../../../Common/Reusable/ModelCard/ModelCard.module.scss";
-import Main from "@/app/Common/Reusable/ModelCard/Main";
-import { Data } from "@/app/catalog/semi-industrial/[slug]/page";
+import Main from "@/app/Common/Reusable/MultisplitModelCard/Main";
+import { Data, DataInner } from "../../page";
 
 const mainParams = [
    {
@@ -19,9 +18,9 @@ const mainParams = [
 export async function generateStaticParams() {
    const data = await fetchGraphql(`
    {
-      semiIndustrials(first: 999) {
+      multiSplits(first: 999) {
         nodes {
-         semiIndustrialGroup {
+         multisplitGroup {
             url
             model
           }
@@ -29,10 +28,10 @@ export async function generateStaticParams() {
       }
     }
    `);
-   return data.data.semiIndustrials.nodes.map((el: any) => {
+   return data.data.multiSplits.nodes.map((el: any) => {
       return {
-         slug: el.semiIndustrialGroup.url,
-         model: el.semiIndustrialGroup.model.replace(/\s|\//g, "-").toLowerCase(),
+         slug: el.multisplitGroup.url,
+         model: el.multisplitGroup.model.replace(/\s|\//g, "-").toLowerCase(),
       };
    });
 }
@@ -41,34 +40,25 @@ async function page({ params }: { params: { model: string } }) {
    const { model } = params;
    const data: Data = await fetchGraphql(`
    {
-      semiIndustrials(first: 999) {
+      multiSplits(first: 999) {
         nodes {
-          semiIndustrialGroup {
-            airOutput
-            coolingOutput
-            energyOutput
-            freon
+          multisplitGroup {
+            connect
+            coolingNominalPower
+            coolingPower
+            cop
+            eer
+            heatNominalPower
             heatOutput
+            model
+            name
+            url
+            description
             image {
               node {
                 sourceUrl
               }
             }
-            innerBlock
-            m2
-            m3
-            model
-            name
-            noiseInnerdb
-            noiseOuterdb
-            outerBlock
-            price
-            type
-            url
-            weightInner
-            weightOuter
-            panelSize
-            pathLength
           }
         }
       }
@@ -79,11 +69,11 @@ async function page({ params }: { params: { model: string } }) {
       <div className={styles.model}>
          <div className="container">
             <Breadcrumbs />
-            {data.data.semiIndustrials.nodes.map((el: AirCondSemiInner) => {
-               if (model === el.semiIndustrialGroup?.model.replace(/\s|\//g, "-").toLowerCase()) {
+            {data.data.multiSplits.nodes.map((el: DataInner) => {
+               if (model === el.multisplitGroup.model.replace(/\s|\//g, "-").toLowerCase()) {
                   if (!flag) {
                      flag = true;
-                     return <Main key={el.id} el={el} mainParams={mainParams} />;
+                     return <Main key={el.id} el={el} />;
                   }
                }
             })}

@@ -27,7 +27,9 @@ function Header() {
                   })}
                </ul>
             </nav>
-            <button className={styles.header__phone}>+998(97) 333-63-57</button>
+            <Link aria-label="phone number" target="_blank" href={"tel:+998973336357"} className={styles.header__phone}>
+               +998(97) 333-63-57
+            </Link>
          </div>
       </header>
    );

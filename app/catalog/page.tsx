@@ -11,6 +11,7 @@ import Breadcrumbs from "../Common/Utilities/Breadcrumbs";
 import accessories from "../../public/img/catalog/accesories.png";
 import duct from "../../public/img/catalog/duct.png";
 import cols from "../../public/img/catalog/cols.png";
+import multi from "../../public/img/catalog/multi.png";
 
 const items = [
    {
@@ -39,36 +40,42 @@ const items = [
    },
    {
       id: 4,
+      name: "Мульти-сплит системы",
+      img: multi,
+      href: "/catalog/multi-split",
+   },
+   {
+      id: 5,
       name: "VRF-системы",
       img: VRF,
       href: "/catalog/vrf",
    },
    {
-      id: 5,
+      id: 6,
       name: "Чиллеры",
       img: chiller,
       href: "/catalog/chillers",
    },
    {
-      id: 6,
+      id: 7,
       name: "Фанкойлы",
       img: fancoil,
       href: "/catalog/fancoils",
    },
    {
-      id: 7,
+      id: 8,
       name: "Компрессорно-конденсаторные блоки",
       img: condensed,
       href: "/catalog/kkb",
    },
    {
-      id: 8,
+      id: 9,
       name: "Руфтопы",
       img: rooftop,
       href: "/catalog/rooftop",
    },
    {
-      id: 9,
+      id: 10,
       name: "Аксессуары",
       img: accessories,
       href: "/catalog/accessories",

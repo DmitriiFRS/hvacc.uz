@@ -18,7 +18,7 @@ type Props = {
 function Main({ el, mainParams }: Props) {
    return (
       <div className={styles.model__body}>
-         <h3 className={styles.model__title}>Инверторный кондиционер {el.airCondGroup?.name || el.semiIndustrialGroup?.name}</h3>
+         <h3 className={styles.model__title}>Колонный кондиционер {el.airCondGroup?.name || el.semiIndustrialGroup?.name}</h3>
          <div className={styles.model__model}>Модель {el.airCondGroup?.model || el.semiIndustrialGroup?.model}</div>
          <div className={styles.model__inner}>
             <div className={styles.model__header}>

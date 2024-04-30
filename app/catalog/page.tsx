@@ -1,6 +1,6 @@
 import styles from "./Catalog.module.scss";
 import alba from "../../public/img/catalog/Alba.png";
-import semiIndustrial from "../../public/img/catalog/semi-industrial.png";
+import cassette from "../../public/img/catalog/semi-industrial.png";
 import VRF from "../../public/img/catalog/VRF.png";
 import chiller from "../../public/img/catalog/chiller.png";
 import fancoil from "../../public/img/catalog/fancoil.png";
@@ -9,6 +9,8 @@ import rooftop from "../../public/img/catalog/rooftop.png";
 import ItemCard from "./ItemCard";
 import Breadcrumbs from "../Common/Utilities/Breadcrumbs";
 import accessories from "../../public/img/catalog/accesories.png";
+import duct from "../../public/img/catalog/duct.png";
+import cols from "../../public/img/catalog/cols.png";
 
 const items = [
    {
@@ -19,42 +21,54 @@ const items = [
    },
    {
       id: 1,
-      name: "Полупромышленные сплит-системы",
-      img: semiIndustrial,
-      href: "/catalog/semi-industrial",
+      name: "Колонные кондиционеры",
+      img: cols,
+      href: "/catalog/col-air-conditioners",
    },
    {
       id: 2,
+      name: "Канальные кондиционеры",
+      img: duct,
+      href: "/catalog/duct-air-conditioners",
+   },
+   {
+      id: 3,
+      name: "Кассетные кондиционеры",
+      img: cassette,
+      href: "/catalog/cassette-air-conditioners",
+   },
+   {
+      id: 4,
       name: "VRF-системы",
       img: VRF,
       href: "/catalog/vrf",
    },
    {
-      id: 4,
+      id: 5,
       name: "Чиллеры",
       img: chiller,
       href: "/catalog/chillers",
    },
    {
-      id: 5,
+      id: 6,
       name: "Фанкойлы",
       img: fancoil,
       href: "/catalog/fancoils",
    },
    {
-      id: 6,
+      id: 7,
       name: "Компрессорно-конденсаторные блоки",
       img: condensed,
       href: "/catalog/kkb",
    },
    {
-      id: 7,
+      id: 8,
       name: "Руфтопы",
       img: rooftop,
       href: "/catalog/rooftop",
    },
    {
-      id: 8,
+      id: 9,
       name: "Аксессуары",
       img: accessories,
       href: "/catalog/accessories",

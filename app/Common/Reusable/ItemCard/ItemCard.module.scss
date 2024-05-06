@@ -388,6 +388,13 @@
    }
    &__body {
       margin: 60px 0 0 0;
+      opacity: 0;
+      transition: 1s;
+      transform: translateY(50%);
+      &__active {
+         opacity: 1;
+         transform: translateY(0%);
+      }
    }
    &__description {
       font-size: 20px;

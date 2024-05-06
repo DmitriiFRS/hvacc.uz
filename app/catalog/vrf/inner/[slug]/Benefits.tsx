@@ -1,13 +1,8 @@
-"use client";
-
-import { useInView } from "react-intersection-observer";
 import styles from "../../../../Common/Reusable/ItemCard/ItemCard.module.scss";
 import { DataInner } from "./page";
-import Image from "next/image";
 import BenefitContent from "./BenefitContent";
 
 function Benefits({ el }: { el: DataInner }) {
-   const { ref } = useInView({});
    return (
       <section className={styles.benefits}>
          {el.vrfInnerGroup.benefits && el.vrfInnerGroup.benefits.length > 1 && (

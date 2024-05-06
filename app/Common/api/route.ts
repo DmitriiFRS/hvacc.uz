@@ -5,7 +5,19 @@ const pass = process.env.MAIL_APP_PASS;
 
 export async function POST(req: NextRequest) {
    try {
-      const { name, tel, question, town, mail } = await req.json();
+      const { name, tel, question, town, mail, token } = await req.json();
+
+      const googleRes = await fetch(`https://www.google.com/recaptcha/api/siteverify?secret=${process.env.SECRET_KEY_RECAPTCHA}&response=${token}`, {
+         method: "POST",
+         headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+         },
+      });
+
+      const data = await googleRes.json();
+      if (!data.success && data?.score < 0.5) {
+         return NextResponse.json({ message: "Failed reCaptcha verification" }, { status: 400 });
+      }
 
       const transporter = nodemailer.createTransport({
          service: "gmail",

@@ -66,33 +66,48 @@ export const mobileNav = [
       href: "/catalog/air-conditioners",
    },
    {
-      name: "Полупромышленные сплит-системы",
+      name: "Колонные кондиционеры",
       id: 2,
-      href: "/catalog/semi-industrial",
+      href: "/catalog/col-air-conditioners",
+   },
+   {
+      name: "Канальные кондиционеры",
+      id: 3,
+      href: "/catalog/duct-air-conditioners",
+   },
+   {
+      name: "Кассетные кондиционеры",
+      id: 4,
+      href: "/catalog/cassette-air-conditioners",
+   },
+   {
+      name: "Мульти-сплит системы",
+      id: 5,
+      href: "/catalog/multi-split",
    },
    {
       name: "VRF системы",
-      id: 3,
+      id: 6,
       href: "/catalog/vrf",
    },
    {
       name: "Чиллеры",
-      id: 4,
+      id: 7,
       href: "/catalog/chillers",
    },
    {
       name: "Фанкойлы",
-      id: 5,
+      id: 8,
       href: "/catalog/fancoils",
    },
    {
       name: "Компрессорно-конденсаторные блоки",
-      id: 6,
+      id: 9,
       href: "/catalog/kkb",
    },
    {
       name: "Руфтопы",
-      id: 7,
+      id: 10,
       href: "/catalog/rooftop",
    },
 ];

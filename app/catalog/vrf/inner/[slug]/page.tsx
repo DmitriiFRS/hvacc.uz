@@ -8,6 +8,7 @@ import Description from "@/app/Common/Reusable/ItemCard/Description";
 import VRFTable from "@/app/Common/Reusable/ItemCard/VRFInnerTable";
 import { OuterInnerVRF } from "@/app/Common/Data/Vrf.type";
 import ParamsIndustrial from "@/app/Common/Reusable/ItemCard/ParamsIndustrial";
+import Benefits from "./Benefits";
 
 export type DataInner = {
    id: string;
@@ -47,6 +48,49 @@ export type DataInner = {
       mainParamText1: string;
       mainParamText2: string | null;
       description: string;
+      benefits: string[] | null;
+      benefit1: string | null;
+      benefit2: string | null;
+      benefit3: string | null;
+      benefit4: string | null;
+      benefit5: string | null;
+      benefit6: string | null;
+      title1: string | null;
+      title2: string | null;
+      title3: string | null;
+      title4: string | null;
+      title5: string | null;
+      title6: string | null;
+      image1: {
+         node: {
+            sourceUrl: string;
+         };
+      };
+      image2: {
+         node: {
+            sourceUrl: string;
+         };
+      };
+      image3: {
+         node: {
+            sourceUrl: string;
+         };
+      };
+      image4: {
+         node: {
+            sourceUrl: string;
+         };
+      };
+      image5: {
+         node: {
+            sourceUrl: string;
+         };
+      };
+      image6: {
+         node: {
+            sourceUrl: string;
+         };
+      };
    };
 };
 
@@ -115,6 +159,49 @@ async function page({ params }: { params: { slug: string } }) {
              mainParamText1
              mainParamText2
              description
+             benefits
+            benefit1
+            benefit2
+            benefit3
+            benefit4
+            benefit5
+            benefit6
+            title1
+            title2
+            title3
+            title4
+            title5
+            title6
+            image1 {
+            node {
+               sourceUrl
+            }
+            }
+            image2 {
+            node {
+               sourceUrl
+            }
+            }
+            image3 {
+            node {
+               sourceUrl
+            }
+            }
+            image4 {
+            node {
+               sourceUrl
+            }
+            }
+            image5 {
+               node {
+                  sourceUrl
+               }
+               }
+               image6 {
+                  node {
+                     sourceUrl
+                  }
+                  }
           }
         }
       }
@@ -148,6 +235,7 @@ async function page({ params }: { params: { slug: string } }) {
                               </div>
                               <VRFTable el={arr} slug={slug} />
                               <Description description={el.vrfInnerGroup.description} />
+                              <Benefits el={arr[0] as DataInner} />
                            </div>
                         );
                      }

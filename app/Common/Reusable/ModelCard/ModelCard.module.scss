@@ -46,6 +46,7 @@
       @media (max-width: 650px) {
          flex-direction: column;
          align-items: center;
+         gap: 30px;
       }
    }
    &__main {
@@ -98,8 +99,10 @@
    &__title {
       flex: 0 1 60%;
       line-height: 140%;
+      font-size: 15px;
    }
    &__param {
+      font-size: 15px;
       flex: 0 1 40%;
       text-align: right;
       font-weight: 500;

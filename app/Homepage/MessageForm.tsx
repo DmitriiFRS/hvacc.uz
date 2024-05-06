@@ -3,8 +3,10 @@
 import { FormEvent, useState } from "react";
 import styles from "./Main.module.scss";
 import { IoMdClose } from "react-icons/io";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 function MessageForm({ isOpen, setOpen, setModal }: { isOpen: boolean; setOpen: (bool: boolean) => void; setModal: (bool: boolean) => void }) {
+   const [submit, setSubmit] = useState("");
    const [name, setName] = useState<string>("");
    const [tel, setTel] = useState<string>("");
    const [question, setQuestion] = useState<string>("");
@@ -13,11 +15,18 @@ function MessageForm({ isOpen, setOpen, setModal }: { isOpen: boolean; setOpen: 
    const [isTelDirty, setTelDirty] = useState(false);
    const [isQuestionDirty, setQuestionDirty] = useState(false);
 
+   const { executeRecaptcha } = useGoogleReCaptcha();
+
    async function submitForm(e: FormEvent) {
       e.preventDefault();
+      setSubmit("");
       setNameDirty(false);
       setTelDirty(false);
       setQuestionDirty(false);
+      if (!executeRecaptcha) {
+         return;
+      }
+      const gRecaptchaToken = await executeRecaptcha("inquirySubmit");
       if (name.length < 1 || tel.length < 1 || question.length < 1) {
          if (name.length < 1) setNameDirty(true);
          if (tel.length < 1) setTelDirty(true);
@@ -94,6 +103,7 @@ function MessageForm({ isOpen, setOpen, setModal }: { isOpen: boolean; setOpen: 
                   id="yourQuestion"
                ></textarea>
             </div>
+            <div className={styles.form__submit}></div>
             <div className={styles.form__submit}>
                <button type="submit">Задать вопрос</button>
             </div>

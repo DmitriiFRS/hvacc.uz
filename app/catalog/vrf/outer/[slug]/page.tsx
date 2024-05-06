@@ -59,7 +59,7 @@ export type Data = {
    };
 };
 
-export async function generateStaticParams() {
+/*export async function generateStaticParams() {
    const data = await fetchGraphql(`
    {
       vrfs(last: 999) {
@@ -86,7 +86,7 @@ export async function generateStaticParams() {
    return data3.map((el: any) => ({
       slug: el.vrfGroup.url,
    }));
-}
+}*/
 
 async function page({ params }: { params: { slug: string } }) {
    const { slug } = params;

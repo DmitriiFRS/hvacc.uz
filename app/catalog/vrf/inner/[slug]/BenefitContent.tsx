@@ -6,8 +6,8 @@ import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 type Props = {
    img?: string;
-   title: string;
-   description: string;
+   title: string | null;
+   description?: string | null;
 };
 function BenefitContent({ img, title, description }: Props) {
    const { ref, inView } = useInView({

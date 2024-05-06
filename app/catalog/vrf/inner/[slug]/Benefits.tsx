@@ -15,7 +15,7 @@ function Benefits({ el }: { el: DataInner }) {
                </ul>
             </>
          )}
-         {el.vrfInnerGroup.title1 && el.vrfInnerGroup.benefit1 && (
+         {el.vrfInnerGroup.title1 && (
             <BenefitContent img={el.vrfInnerGroup.image1?.node.sourceUrl} title={el.vrfInnerGroup.title1} description={el.vrfInnerGroup.benefit1} />
          )}
 

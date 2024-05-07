@@ -367,8 +367,12 @@
       font-size: 32px;
       font-weight: 600;
       color: $darkBlueColor;
+      @media (max-width: 530px) {
+         font-size: 26px;
+      }
    }
    &__list {
+      padding: 0 0 0 20px;
       margin: 40px 0 0 0;
       & li {
          list-style: circle;
@@ -376,6 +380,9 @@
          color: $grayColor;
          &:not(:last-child) {
             margin: 0 0 10px 0;
+         }
+         @media (max-width: 530px) {
+            font-size: 16px;
          }
       }
    }
@@ -385,6 +392,9 @@
       width: 100%;
       aspect-ratio: 4/2;
       margin: 10px 0 0 0;
+      @media (max-width: 450px) {
+         aspect-ratio: 3/2;
+      }
    }
    &__body {
       margin: 60px 0 0 0;
@@ -402,6 +412,9 @@
       line-height: 130%;
       letter-spacing: 0.1px;
       color: $grayColor;
+      @media (max-width: 530px) {
+         font-size: 16px;
+      }
    }
 }
 

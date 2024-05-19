@@ -1,23 +1,21 @@
+import axios from "axios";
 import { NextRequest, NextResponse } from "next/server";
 const nodemailer = require("nodemailer");
 const email = process.env.MAIL_USER;
 const pass = process.env.MAIL_APP_PASS;
 
 export async function POST(req: NextRequest) {
+   let res;
+   const secretKey = process.env.SECRET_KEY_RECAPTCHA;
+   const postData = await req.json();
+   const { name, tel, question, town, mail, gRecaptchaToken } = postData;
+   const formData = `secret=${secretKey}&response=${gRecaptchaToken}`;
    try {
-      const { name, tel, question, town, mail, token } = await req.json();
-
-      const googleRes = await fetch(`https://www.google.com/recaptcha/api/siteverify?secret=${process.env.SECRET_KEY_RECAPTCHA}&response=${token}`, {
-         method: "POST",
+      res = await axios.post("https://www.google.com/recaptcha/api/siteverify", formData, {
          headers: {
             "Content-Type": "application/x-www-form-urlencoded",
          },
       });
-
-      const data = await googleRes.json();
-      if (!data.success && data?.score < 0.5) {
-         return NextResponse.json({ message: "Failed reCaptcha verification" }, { status: 400 });
-      }
 
       const transporter = nodemailer.createTransport({
          service: "gmail",
@@ -46,5 +44,13 @@ export async function POST(req: NextRequest) {
    } catch (err: any) {
       console.log(err);
       return NextResponse.json({ message: "Failed to send email" }, { status: 500 });
+   }
+   if (res && res.data?.success && res.data?.score > 0.5) {
+      return NextResponse.json({
+         success: true,
+         score: res.data.score,
+      });
+   } else {
+      return NextResponse.json({ success: false });
    }
 }

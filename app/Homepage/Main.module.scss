@@ -20,14 +20,42 @@
    margin: 100px 0 0 0;
    &__title {
       @include textTitle1;
+      @media (max-width: 500px) {
+         font-size: 28px;
+      }
    }
    &__grid {
       margin: 50px 0 0 0;
       display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
       grid-template-areas:
-         "air semi semi"
-         "air multi multi"
-         "vrf chil rooftop";
+         "air col duct"
+         "air cas multi"
+         "vrf vrf rooftop"
+         "chil chil kkb";
+      @media (max-width: 900px) {
+         grid-template-columns: 1fr 1fr;
+         grid-template-areas:
+            "air air"
+            "col cas"
+            "duct multi"
+            "vrf chil"
+            "rooftop kkb";
+      }
+      @media (max-width: 500px) {
+         grid-template-columns: 1fr;
+         grid-template-areas:
+            "air"
+            "col"
+            "cas"
+            "duct"
+            "multi"
+            "vrf"
+            "chil"
+            "rooftop"
+            "kkb";
+      }
+
       gap: 20px 20px;
       height: 100%;
       & > * {
@@ -42,6 +70,7 @@
          font-weight: 600;
          color: $darkBlueColor;
          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+         background: linear-gradient(324deg, rgba(209, 209, 209, 1) 0%, rgba(255, 255, 255, 1) 100%);
          border-radius: 8px;
          position: relative;
          z-index: 1;
@@ -50,16 +79,16 @@
             transition: 0.3s;
             content: "";
             position: absolute;
-            left: -60%;
+            left: -70%;
             top: 0;
             width: 0%;
             height: 100%;
             z-index: 0;
-            background: #e2e2e2;
+            background: #e6feff;
             transform: skew(45deg);
          }
          &:hover::before {
-            width: 220%;
+            width: 240%;
          }
       }
    }
@@ -71,11 +100,19 @@
       grid-area: air;
       height: 100%;
    }
-   &__semiInd {
-      grid-area: semi;
+   &__colSplit {
+      grid-area: col;
+   }
+   &__ductSplit {
+      grid-area: duct;
+      background: linear-gradient(129deg, rgba(209, 209, 209, 1) 0%, rgba(255, 255, 255, 1) 100%);
+   }
+   &__casSplit {
+      grid-area: cas;
    }
    &__multi {
       grid-area: multi;
+      background: linear-gradient(129deg, rgba(209, 209, 209, 1) 0%, rgba(255, 255, 255, 1) 100%);
    }
    &__vrf {
       grid-area: vrf;
@@ -85,6 +122,11 @@
    }
    &__rooftop {
       grid-area: rooftop;
+      background: linear-gradient(129deg, rgba(209, 209, 209, 1) 0%, rgba(255, 255, 255, 1) 100%);
+   }
+   &__kkb {
+      grid-area: kkb;
+      background: linear-gradient(129deg, rgba(209, 209, 209, 1) 0%, rgba(255, 255, 255, 1) 100%);
    }
    &__imgBody {
       position: relative;
@@ -95,10 +137,16 @@
    &__imgBodyAircond {
       max-width: 300px;
       aspect-ratio: 2/2;
+      @media (max-width: 900px) {
+         aspect-ratio: 3/2;
+      }
+      @media (max-width: 500px) {
+         max-width: 200px;
+      }
    }
 }
 .popular {
-   margin: 280px 0 0 0;
+   margin: 80px 0 0 0;
    &__title {
       @include textTitle1;
       text-align: center;

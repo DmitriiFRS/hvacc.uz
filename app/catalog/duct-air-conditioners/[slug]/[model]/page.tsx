@@ -16,27 +16,6 @@ const mainParams = [
    },
 ];
 
-export async function generateStaticParams() {
-   const data = await fetchGraphql(`
-   {
-      ductAirconds(first: 999) {
-        nodes {
-         semiIndustrialGroup {
-            url
-            model
-          }
-        }
-      }
-    }
-   `);
-   return data.data.ductAirconds.nodes.map((el: any) => {
-      return {
-         slug: el.semiIndustrialGroup.url,
-         model: el.semiIndustrialGroup.model.replace(/\s|\//g, "-").toLowerCase(),
-      };
-   });
-}
-
 async function page({ params }: { params: { model: string } }) {
    const { model } = params;
    const data: Data = await fetchGraphql(`

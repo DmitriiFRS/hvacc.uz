@@ -33,23 +33,6 @@ const mainParams: ParamsType[] = [
    },
 ];
 
-export async function generateStaticParams() {
-   const data = await fetchGraphql(`
-   {
-      airconds(first: 999) {
-        nodes {
-          airCondGroup {
-            url
-          }
-        }
-      }
-    }
-   `);
-   return data.data.airconds.nodes.map((el: any) => ({
-      slug: el.airCondGroup.url,
-   }));
-}
-
 async function slug({ params }: { params: { slug: string } }) {
    const { slug } = params;
    const data: Data = await fetchGraphql(`

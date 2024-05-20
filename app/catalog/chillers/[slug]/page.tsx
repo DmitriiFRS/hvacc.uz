@@ -57,23 +57,6 @@ export type Data = {
    };
 };
 
-export async function generateStaticParams() {
-   const data = await fetchGraphql(`
-   {
-      chillers(first: 999) {
-        nodes {
-         chillerGroup {
-            url
-          }
-        }
-      }
-    }
-   `);
-   return data.data.chillers.nodes.map((el: any) => ({
-      slug: el.chillerGroup.url,
-   }));
-}
-
 async function page({ params }: { params: { slug: string } }) {
    const { slug } = params;
    const data: Data = await fetchGraphql(`

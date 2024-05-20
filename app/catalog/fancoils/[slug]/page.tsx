@@ -58,23 +58,6 @@ export type Data = {
    };
 };
 
-export async function generateStaticParams() {
-   const data = await fetchGraphql(`
-   {
-      fancoils(last: 999) {
-        nodes {
-         fancoilGroup {
-            url
-          }
-        }
-      }
-    }
-   `);
-   return data.data.fancoils.nodes.map((el: any) => ({
-      slug: el.fancoilGroup.url,
-   }));
-}
-
 async function page({ params }: { params: { slug: string } }) {
    const { slug } = params;
    const data: Data = await fetchGraphql(`

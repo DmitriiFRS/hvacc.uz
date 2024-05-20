@@ -22,23 +22,6 @@ const mainParams: ParamsType[] = [
    },
 ];
 
-export async function generateStaticParams() {
-   const data = await fetchGraphql(`
-   {
-      multiSplits(last: 999) {
-        nodes {
-          multisplitGroup {
-            url
-          }
-        }
-      }
-    }
-   `);
-   return data.data.multiSplits.nodes.map((el: any) => ({
-      slug: el.multisplitGroup.url,
-   }));
-}
-
 async function slug({ params }: { params: { slug: string } }) {
    const { slug } = params;
    const data: Data = await fetchGraphql(`

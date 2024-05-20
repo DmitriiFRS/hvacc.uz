@@ -4,27 +4,6 @@ import Breadcrumbs from "@/app/Common/Utilities/Breadcrumbs";
 import styles from "../../../../../Common/Reusable/ModelCard/ModelCard.module.scss";
 import Main from "@/app/Common/Reusable/VRFModelCard/Main";
 
-export async function generateStaticParams() {
-   const data = await fetchGraphql(`
-  {
-    vrfAtoms(last: 999) {
-       nodes {
-        vrfGroup {
-           url
-           model
-         }
-       }
-     }
-   }
-  `);
-   return data.data.vrfAtoms.nodes.map((el: any) => {
-      return {
-         slug: el.vrfGroup.url,
-         model: el.vrfGroup.model.replace(/\s|\//g, "-").toLowerCase(),
-      };
-   });
-}
-
 async function page({ params }: { params: { model: string } }) {
    const { model } = params;
    const data: Data = await fetchGraphql(`

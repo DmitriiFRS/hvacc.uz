@@ -12,27 +12,6 @@ type Data = {
    };
 };
 
-export async function generateStaticParams() {
-   const data = await fetchGraphql(`
-  {
-   vrfsInner(last: 999) {
-       nodes {
-         vrfInnerGroup {
-           url
-           model
-         }
-       }
-     }
-   }
-  `);
-   return data.data.vrfsInner.nodes.map((el: any) => {
-      return {
-         slug: el.vrfInnerGroup.url,
-         model: el.vrfInnerGroup.model.replace(/\s|\//g, "-").toLowerCase(),
-      };
-   });
-}
-
 async function page({ params }: { params: { model: string } }) {
    const { model } = params;
    const data: Data = await fetchGraphql(`

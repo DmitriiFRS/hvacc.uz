@@ -4,27 +4,6 @@ import Breadcrumbs from "@/app/Common/Utilities/Breadcrumbs";
 import styles from "../../../../Common/Reusable/ModelCard/ModelCard.module.scss";
 import Main from "@/app/Common/Reusable/FancoilModelCard/Main";
 
-export async function generateStaticParams() {
-   const data = await fetchGraphql(`
-   {
-      fancoils(last: 999) {
-        nodes {
-         fancoilGroup {
-            url
-            model
-          }
-        }
-      }
-    }
-   `);
-   return data.data.fancoils.nodes.map((el: any) => {
-      return {
-         slug: el.fancoilGroup.url,
-         model: el.fancoilGroup.model.replace(/\s|\//g, "-").toLowerCase(),
-      };
-   });
-}
-
 async function page({ params }: { params: { model: string } }) {
    const { model } = params;
    const data: Data = await fetchGraphql(`

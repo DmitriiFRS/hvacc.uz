@@ -16,27 +16,6 @@ const mainParams = [
    },
 ];
 
-export async function generateStaticParams() {
-   const data = await fetchGraphql(`
-   {
-      airconds(first: 999) {
-        nodes {
-          airCondGroup {
-            url
-            model
-          }
-        }
-      }
-    }
-   `);
-   return data.data.airconds.nodes.map((el: any) => {
-      return {
-         slug: el.airCondGroup.url,
-         model: el.airCondGroup.model.replace(/\s|\//g, "-").toLowerCase(),
-      };
-   });
-}
-
 async function page({ params }: { params: { model: string } }) {
    const { model } = params;
    const data: Data = await fetchGraphql(`

@@ -15,27 +15,6 @@ const mainParams = [
    },
 ];
 
-export async function generateStaticParams() {
-   const data = await fetchGraphql(`
-   {
-      multiSplits(first: 999) {
-        nodes {
-         multisplitGroup {
-            url
-            model
-          }
-        }
-      }
-    }
-   `);
-   return data.data.multiSplits.nodes.map((el: any) => {
-      return {
-         slug: el.multisplitGroup.url,
-         model: el.multisplitGroup.model.replace(/\s|\//g, "-").toLowerCase(),
-      };
-   });
-}
-
 async function page({ params }: { params: { model: string } }) {
    const { model } = params;
    const data: Data = await fetchGraphql(`

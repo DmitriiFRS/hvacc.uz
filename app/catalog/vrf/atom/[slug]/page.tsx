@@ -59,23 +59,6 @@ export type Data = {
    };
 };
 
-export async function generateStaticParams() {
-   const data = await fetchGraphql(`
-   {
-      vrfAtoms(last: 999) {
-        nodes {
-         vrfGroup {
-            url
-          }
-        }
-      }
-    }
-   `);
-   return data.data.vrfAtoms.nodes.map((el: any) => ({
-      slug: el.vrfGroup.url,
-   }));
-}
-
 async function page({ params }: { params: { slug: string } }) {
    const { slug } = params;
    const data: Data = await fetchGraphql(`

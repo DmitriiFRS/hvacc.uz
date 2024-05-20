@@ -59,35 +59,6 @@ export type Data = {
    };
 };
 
-/*export async function generateStaticParams() {
-   const data = await fetchGraphql(`
-   {
-      vrfs(last: 999) {
-        nodes {
-         vrfGroup {
-            url
-          }
-        }
-      }
-    }
-   `);
-   const data2 = await fetchGraphql(`
-   {
-      vrfs(first: 48) {
-        nodes {
-         vrfGroup {
-            url
-          }
-        }
-      }
-    }
-   `);
-   const data3 = data.data.vrfs.nodes.concat(data2.data.vrfs.nodes);
-   return data3.map((el: any) => ({
-      slug: el.vrfGroup.url,
-   }));
-}*/
-
 async function page({ params }: { params: { slug: string } }) {
    const { slug } = params;
    const data: Data = await fetchGraphql(`

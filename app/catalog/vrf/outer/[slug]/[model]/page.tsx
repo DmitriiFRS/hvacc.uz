@@ -4,40 +4,6 @@ import Breadcrumbs from "@/app/Common/Utilities/Breadcrumbs";
 import styles from "../../../../../Common/Reusable/ModelCard/ModelCard.module.scss";
 import Main from "@/app/Common/Reusable/VRFModelCard/Main";
 
-export async function generateStaticParams() {
-   const data = await fetchGraphql(`
-{
-  vrfs(last: 999) {
-     nodes {
-       vrfGroup {
-         url
-         model
-       }
-     }
-   }
- }
-`);
-   const data2 = await fetchGraphql(`
-{
-  vrfs(first: 48) {
-     nodes {
-       vrfGroup {
-         url
-         model
-       }
-     }
-   }
- }
-`);
-   const data3 = data.data.vrfs.nodes.concat(data2.data.vrfs.nodes);
-   return data3.map((el: any) => {
-      return {
-         slug: el.vrfGroup.url,
-         model: el.vrfGroup.model.replace(/\s|\//g, "-").toLowerCase(),
-      };
-   });
-}
-
 async function page({ params }: { params: { model: string } }) {
    const { model } = params;
    const data: Data = await fetchGraphql(`

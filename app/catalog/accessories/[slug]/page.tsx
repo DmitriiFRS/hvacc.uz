@@ -58,23 +58,6 @@ type Data = {
    };
 };
 
-export async function generateStaticParams() {
-   const data = await fetchGraphql(`
-   {
-      allAccesories {
-        nodes {
-          accesoriesGroup {
-            uri
-          }
-        }
-      }
-    }
-   `);
-   return data.data.allAccesories.nodes.map((el: any) => ({
-      slug: el.accesoriesGroup.uri,
-   }));
-}
-
 async function page({ params }: { params: { slug: string } }) {
    const { slug } = params;
    const data: Data = await fetchGraphql(`

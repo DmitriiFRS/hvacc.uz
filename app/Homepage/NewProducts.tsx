@@ -8,6 +8,7 @@ import magboost from "../../public/img/homepage/magboost.webp";
 import v8 from "../../public/img/homepage/v8.jpg";
 import Image from "next/image";
 import "swiper/css/pagination";
+import Link from "next/link";
 
 const sliderData = [
    {
@@ -16,12 +17,14 @@ const sliderData = [
       subtitle1: "Наружные блоки нового поколения VRF-системы серии V8 представлены блоками модульного и индивидуального исполнения от 25,2 до 112 кВт.",
       subtitle2:
          "В одну систему можно объединять до трех модулей, таким образом максимальная холодопроизводительность составит 336 кВт. VRF-система сочетает в себе такие инновационные технологии как HyperLink, ShieldBox, SuperSense.",
+      link: "catalog/vrf/outer",
    },
    {
       img: magboost,
       title: "Серия чиллеров Magboost",
       subtitle1: "Центробежный чиллер с магнитным валом MagBoost - это новейшее поколение чиллеров",
       subtitle2: "Серия предоставляет безмаслянную, высокоэффективную, стабильную, надёжную и бесшумную работу в широком диапазоне мощностей",
+      link: "catalog/chillers/magboost",
    },
 ];
 
@@ -62,9 +65,9 @@ function NewProducts() {
                               <p>{el.subtitle2}</p>
                            </div>
                            <div className={styles.new__btn}>
-                              <button>
+                              <Link href={el.link}>
                                  <span>Подробнее</span>
-                              </button>
+                              </Link>
                            </div>
                         </div>
                      </div>

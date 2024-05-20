@@ -396,7 +396,7 @@
       @media (max-width: 380px) {
          margin: 10px 0 0 0;
       }
-      & button {
+      & > * {
          height: 60px;
          max-width: 200px;
          width: 100%;

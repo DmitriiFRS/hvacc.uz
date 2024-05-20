@@ -1,7 +1,5 @@
 import { AirCondSemiInner } from "../../Data/Equip/AirCond-SemiInd.data";
-import MainParams from "./MainParams";
 import styles from "./ModelCard.module.scss";
-import Image from "next/image";
 import ModelTable from "./ModelTable";
 import LeftSideAircondSemiInd from "./LeftSideAircondSemiInd";
 

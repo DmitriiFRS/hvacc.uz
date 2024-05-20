@@ -49,13 +49,23 @@ function Footer() {
                      </Link>
                   </div>
                   <div className={styles.footer__iconsBody}>
-                     <Link className={styles.footer__icon} href={"#"} aria-label="facebook">
+                     <Link
+                        className={styles.footer__icon}
+                        href={"https://www.facebook.com/profile.php?id=61559886272525&mibextid=ZbWKwL"}
+                        aria-label="facebook"
+                        target="_blank"
+                     >
                         <FaFacebookF color="#888888" size={35} />
                      </Link>
-                     <Link className={styles.footer__icon} href={"#"} aria-label="instagram">
+                     <Link
+                        className={styles.footer__icon}
+                        href={"https://www.instagram.com/hvacc.uz?utm_source=qr&igsh=MThucXB3NmR4cDg5MA=="}
+                        aria-label="instagram"
+                        target="_blank"
+                     >
                         <CiInstagram color="#888888" size={35} />
                      </Link>
-                     <Link className={styles.footer__icon} href={"#"} aria-label="telegram">
+                     <Link className={styles.footer__icon} href={"https://t.me/+WAsOhLwBNixjODNi"} aria-label="telegram" target="_blank">
                         <FaTelegramPlane color="#888888" size={35} />
                      </Link>
                   </div>

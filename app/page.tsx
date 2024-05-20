@@ -43,9 +43,9 @@ export default async function Home() {
          <Message />
          <Video />
          <div className={styles.homepage}>
+            <Catalog />
             <Banner img={data.data.banners.nodes[0].bannerGroup.image.node.sourceUrl} />
             <NewProducts />
-            <Catalog />
             <Popular data={data.data.populars.nodes} />
          </div>
       </>

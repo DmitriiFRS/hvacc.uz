@@ -16,6 +16,8 @@ const mainParams = [
    },
 ];
 
+const type = "Кассетный";
+
 async function page({ params }: { params: { model: string } }) {
    const { model } = params;
    const data: Data = await fetchGraphql(`
@@ -41,7 +43,6 @@ async function page({ params }: { params: { model: string } }) {
             noiseInnerdb
             noiseOuterdb
             outerBlock
-            price
             type
             url
             weightInner
@@ -62,7 +63,7 @@ async function page({ params }: { params: { model: string } }) {
                if (model === el.semiIndustrialGroup?.model.replace(/\s|\//g, "-").toLowerCase()) {
                   if (!flag) {
                      flag = true;
-                     return <Main key={el.id} el={el} mainParams={mainParams} />;
+                     return <Main key={el.id} el={el} mainParams={mainParams} type={type} />;
                   }
                }
             })}

@@ -16,6 +16,8 @@ const mainParams = [
    },
 ];
 
+const type = "Настенный";
+
 async function page({ params }: { params: { model: string } }) {
    const { model } = params;
    const data: Data = await fetchGraphql(`
@@ -56,7 +58,6 @@ async function page({ params }: { params: { model: string } }) {
             name
             noiseInnerdb
             noiseOuterdb
-            price
             url
             weightInner
             weightOuter
@@ -74,7 +75,7 @@ async function page({ params }: { params: { model: string } }) {
                if (model === el.airCondGroup?.model.replace(/\s|\//g, "-").toLowerCase()) {
                   if (!flag) {
                      flag = true;
-                     return <Main key={el.id} el={el} mainParams={mainParams} />;
+                     return <Main key={el.id} el={el} mainParams={mainParams} type={type} />;
                   }
                }
             })}

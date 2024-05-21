@@ -73,7 +73,6 @@ async function slug({ params }: { params: { slug: string } }) {
             name
             noiseInnerdb
             noiseOuterdb
-            price
             url
             weightInner
             weightOuter

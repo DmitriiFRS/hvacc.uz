@@ -6,7 +6,7 @@ import MobileTableAircondSemiInd from "./MobileTableAircondSemiInd";
 function Table({ el, slug }: { el: AirCondSemiInner[]; slug: string }) {
    return (
       <div className={`${styles.main__table} ${styles.table}`}>
-         <h3 className={styles.table__title}>Все модели серии {el[0].airCondGroup?.name || el[0].semiIndustrialGroup?.name} Inverter, характеристики</h3>
+         <h3 className={styles.table__title}>Все модели серии {el[0].airCondGroup?.name || el[0].semiIndustrialGroup?.name}, характеристики</h3>
          <MobileTableAircondSemiInd el={el} slug={slug} />
          <div className={styles.table__body}>
             <div className={styles.table__row}>
@@ -61,16 +61,6 @@ function Table({ el, slug }: { el: AirCondSemiInner[]; slug: string }) {
                   return (
                      <div key={index} className={styles.table__col}>
                         {item.airCondGroup?.m3 || item.semiIndustrialGroup?.m3}
-                     </div>
-                  );
-               })}
-            </div>
-            <div className={styles.table__row}>
-               <div className={styles.table__header}>Цена: UZS</div>
-               {el.map((item, index) => {
-                  return (
-                     <div key={index} className={`${styles.table__col} ${styles.table__col__price}`}>
-                        {item.airCondGroup?.price || item.semiIndustrialGroup?.price}
                      </div>
                   );
                })}

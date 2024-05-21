@@ -26,7 +26,6 @@ export type DataInner = {
       model: string;
       noiseInnerdb: string;
       noiseOuterdb: string;
-      price: number;
       url: string;
       weightInner: string;
       weightOuter: string;
@@ -100,7 +99,6 @@ async function slug({ params }: { params: { slug: string } }) {
             noiseInnerdb
             noiseOuterdb
             outerBlock
-            price
             type
             url
             weightInner

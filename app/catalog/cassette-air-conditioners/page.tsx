@@ -25,7 +25,7 @@ type Data = {
    };
 };
 
-const title = "Канальные кондиционеры";
+const title = "Кассетные кондиционеры";
 
 async function page() {
    const data: Data = await fetchGraphql(`

@@ -14,7 +14,6 @@ export type AirCondSemiInner = {
       model: string;
       noiseInnerdb: string;
       noiseOuterdb: string;
-      price: number;
       url: string;
       weightInner: string;
       weightOuter: string;

@@ -26,7 +26,6 @@ export type DataInner = {
       model: string;
       noiseInnerdb: string;
       noiseOuterdb: string;
-      price: number;
       url: string;
       weightInner: string;
       weightOuter: string;
@@ -100,7 +99,6 @@ async function slug({ params }: { params: { slug: string } }) {
             noiseInnerdb
             noiseOuterdb
             outerBlock
-            price
             type
             url
             weightInner
@@ -119,7 +117,7 @@ async function slug({ params }: { params: { slug: string } }) {
          <div className={`container ${styles.item__container}`}>
             <Breadcrumbs />
             <div className={styles.item__body}>
-               <h2 className={styles.item__title}>Колонные кондиционеры</h2>
+               <h2 className={styles.item__title}>Кассетные кондиционеры</h2>
                {data.data.cassetteAirconds.nodes.map((el) => {
                   if (slug === el.semiIndustrialGroup?.url) {
                      arr.push(el);
@@ -127,7 +125,7 @@ async function slug({ params }: { params: { slug: string } }) {
                         flag = true;
                         return (
                            <div key={el.id} className={`${styles.item__main} ${styles.main}`}>
-                              <h3 className={styles.main__title}>Серия колонных кондиционеров {el.semiIndustrialGroup.name}</h3>
+                              <h3 className={styles.main__title}>Серия кассетных кондиционеров {el.semiIndustrialGroup.name}</h3>
                               <div className={styles.main__preview}>
                                  <Img image={el.semiIndustrialGroup.image.node.sourceUrl} name={el.semiIndustrialGroup.name} el={el} />
                                  <Params mainParams={mainParams} />

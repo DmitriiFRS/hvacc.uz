@@ -3,6 +3,9 @@
    position: relative;
    z-index: 6;
    margin: 700px 0 0 0;
+   @media (max-width: 900px) {
+      margin: 0;
+   }
 }
 .descriptionBody {
    margin: 350px 0 0 0;

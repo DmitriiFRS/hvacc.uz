@@ -1,54 +1,8 @@
 import Breadcrumbs from "../Common/Utilities/Breadcrumbs";
 import styles from "./news.module.scss";
-import test from "../../public/img/aboutbg.jpeg";
 import Image from "next/image";
 import Link from "next/link";
 import fetchGraphql from "../Common/Utilities/FetchGraphql";
-
-const cols = [
-   {
-      title: "Тестовый заголовок Тестовый заголовок Тестовый заголовок",
-      img: test,
-      description: " fdfdfdfdfdfdf fdfdfdfdfdfdf fdfdfdfdfdfdf fdfdfdfdfdfdf fdfdfdfdfdfdf fdfdfdfdfdfdf",
-      date: "23/04/2024",
-   },
-   {
-      title: "Тестовый заголовок Тестовый заголовок Тестовый заголовок Тестовый заголовок Тестовый заголовок",
-      img: test,
-      description: " fdfdfdfdfdfdf fdfdfdfdfdfdf fdfdfdfdfdfdf fdfdfdfdfdfdf fdfdfdfdfdfdf fdfdfdfdfdfdf",
-      date: "23/04/2024",
-   },
-   {
-      title: "Тестовый заголовок",
-      img: test,
-      description: " fdfdfdfdfdfdf fdfdfdfdfdfdf fdfdfdfdfdfdf fdfdfdfdfdfdf fdfdfdfdfdfdf fdfdfdfdfdfdf",
-      date: "23/04/2024",
-   },
-   {
-      title: "Тестовый заголовок Тестовый заголовок Тестовый заголовок Тестовый заголовок Тестовый заголовок",
-      img: test,
-      description: " fdfdfdfdfdfdf fdfdfdfdfdfdf fdfdfdfdfdfdf fdfdfdfdfdfdf fdfdfdfdfdfdf fdfdfdfdfdfdf",
-      date: "23/04/2024",
-   },
-   {
-      title: "Тестовый заголовок",
-      img: test,
-      description: " fdfdfdfdfdfdf fdfdfdfdfdfdf fdfdfdfdfdfdf fdfdfdfdfdfdf fdfdfdfdfdfdf fdfdfdfdfdfdf",
-      date: "23/04/2024",
-   },
-   {
-      title: "Тестовый заголовок",
-      img: test,
-      description: " fdfdfdfdfdfdf fdfdfdfdfdfdf fdfdfdfdfdfdf fdfdfdfdfdfdf fdfdfdfdfdfdf fdfdfdfdfdfdf",
-      date: "23/04/2024",
-   },
-   {
-      title: "Тестовый заголовок",
-      img: test,
-      description: " fdfdfdfdfdfdf fdfdfdfdfdfdf fdfdfdfdfdfdf fdfdfdfdfdfdf fdfdfdfdfdfdf fdfdfdfdfdfdf",
-      date: "23/04/2024",
-   },
-];
 
 type DataInner = {
    id: string;

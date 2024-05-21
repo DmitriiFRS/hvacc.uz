@@ -29,21 +29,6 @@ type Data = {
    };
 };
 
-export async function generateStaticParams() {
-   const data = await fetchGraphql(`
-   {
-      newsAll(first: 999) {
-        nodes {
-         id
-        }
-      }
-    }
-   `);
-   return data.data.newsAll.nodes.map((el: any) => ({
-      slug: el.id,
-   }));
-}
-
 async function page({ params }: { params: { slug: string } }) {
    const { slug } = params;
    const data: Data = await fetchGraphql(`

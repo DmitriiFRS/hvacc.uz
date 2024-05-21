@@ -19,7 +19,7 @@ function Message() {
          <div className={styles.message__container}>
             {isOpen && <MessageForm isOpen={isOpen} setOpen={setOpen} setModal={setModal} />}
             {isModal && <SubmitForm isModal={isModal} setModal={setModal} />}
-            <button onClick={toggleModal} className={styles.message__iconBody}>
+            <button aria-label="форма отправки" onClick={toggleModal} className={styles.message__iconBody}>
                {isOpen ? <FaChevronDown className={styles.message__iconChevron} /> : <AiFillMessage className={styles.message__icon} />}
             </button>
          </div>

@@ -46,31 +46,31 @@ function Catalog() {
                <Link href={"catalog/multi-split"} className={styles.catalog__multi}>
                   <div className={styles.catalog__itemTitle}>Мульти-сплит системы</div>
                   <div className={styles.catalog__imgBody}>
-                     <Image quality={30} priority={true} src={multi} alt="Мульти-сплит системы" fill style={{ objectFit: "contain" }} />
+                     <Image quality={30} src={multi} alt="Мульти-сплит системы" fill style={{ objectFit: "contain" }} />
                   </div>
                </Link>
                <Link href={"catalog/vrf"} className={styles.catalog__vrf}>
                   <div className={styles.catalog__itemTitle}>VRF системы</div>
                   <div className={styles.catalog__imgBody}>
-                     <Image quality={30} priority={true} src={VRF} alt="VRF системы" fill style={{ objectFit: "contain" }} />
+                     <Image quality={30} src={VRF} alt="VRF системы" fill style={{ objectFit: "contain" }} />
                   </div>
                </Link>
                <Link href={"catalog/chillers"} className={styles.catalog__chillers}>
                   <div className={styles.catalog__itemTitle}>Чиллеры</div>
                   <div className={styles.catalog__imgBody}>
-                     <Image quality={30} priority={true} src={chiller} alt="Чиллеры" fill style={{ objectFit: "contain" }} />
+                     <Image quality={30} src={chiller} alt="Чиллеры" fill style={{ objectFit: "contain" }} />
                   </div>
                </Link>
                <Link href={"catalog/rooftop"} className={styles.catalog__rooftop}>
                   <div className={styles.catalog__itemTitle}>Руфтопы</div>
                   <div className={styles.catalog__imgBody}>
-                     <Image quality={30} priority={true} src={rooftop} alt="Руфтопы" fill style={{ objectFit: "contain" }} />
+                     <Image quality={30} src={rooftop} alt="Руфтопы" fill style={{ objectFit: "contain" }} />
                   </div>
                </Link>
                <Link href={"catalog/kkb"} className={styles.catalog__kkb}>
                   <div className={styles.catalog__itemTitle}>Компрессорно-конденсаторные блоки</div>
                   <div className={styles.catalog__imgBody}>
-                     <Image quality={30} priority={true} src={kkb} alt="Компрессорно-конденсаторные блоки" fill style={{ objectFit: "contain" }} />
+                     <Image quality={30} src={kkb} alt="Компрессорно-конденсаторные блоки" fill style={{ objectFit: "contain" }} />
                   </div>
                </Link>
             </div>

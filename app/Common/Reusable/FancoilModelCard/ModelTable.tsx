@@ -52,14 +52,19 @@ function ModelTable({ element }: { element: DataInner }) {
             <div className={styles.table__title}>Макс раб. давление теплообменника MPa</div>
             <div className={styles.table__param}>{element.fancoilGroup.pressureHeatExchanger}</div>
          </li>
-         <li className={styles.table__item}>
-            <div className={styles.table__title}>Размер панели Д/В/Ш</div>
-            <div className={styles.table__param}>{element.fancoilGroup.panelSize}</div>
-         </li>
-         <li className={styles.table__item}>
-            <div className={styles.table__title}>Масса панели kg</div>
-            <div className={styles.table__param}>{element.fancoilGroup.panelWeight}</div>
-         </li>
+
+         {element.fancoilGroup.panelSize && (
+            <li className={styles.table__item}>
+               <div className={styles.table__title}>Размер панели Д/В/Ш</div>
+               <div className={styles.table__param}>{element.fancoilGroup.panelSize}</div>
+            </li>
+         )}
+         {element.fancoilGroup.panelWeight && (
+            <li className={styles.table__item}>
+               <div className={styles.table__title}>Масса панели kg</div>
+               <div className={styles.table__param}>{element.fancoilGroup.panelWeight}</div>
+            </li>
+         )}
          <li className={styles.table__item}>
             <div className={styles.table__title}>Размер корпуса Д/В/Ш</div>
             <div className={styles.table__param}>{element.fancoilGroup.bodySize}</div>

@@ -2,6 +2,7 @@ import styles from "./ItemCard.module.scss";
 import Link from "next/link";
 import VRFList from "./VRFList";
 import { OuterInnerVRF } from "../../Data/Vrf.type";
+import MobileTableVRFInner from "./MobileTableVRFInner";
 
 function VRFTable({ el, slug }: { el: OuterInnerVRF[]; slug: string }) {
    {
@@ -10,6 +11,7 @@ function VRFTable({ el, slug }: { el: OuterInnerVRF[]; slug: string }) {
       ) : (
          <div className={`${styles.main__table} ${styles.table}`}>
             <h3 className={styles.table__title}>Все модели серии {el[0].vrfInnerGroup?.name}, характеристики</h3>
+            <MobileTableVRFInner el={el} slug={slug} />
             <div className={styles.table__body}>
                <div className={styles.table__row}>
                   <div className={styles.table__header}>Модели</div>

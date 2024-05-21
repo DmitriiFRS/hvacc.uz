@@ -269,15 +269,20 @@
       padding: 20px;
       margin: 40px 0 0 0;
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
       gap: 20px;
       place-items: center;
       font-size: 20px;
       width: 100%;
       @media (max-width: 600px) {
-         display: flex;
-         flex-wrap: wrap;
-         height: auto;
+         grid-template-columns: 1fr 1fr;
+      }
+      @media (max-width: 400px) {
+         gap: 10px;
+         padding: 0;
+      }
+      @media (max-width: 340px) {
+         grid-template-columns: 1fr;
       }
    }
    &__item {
@@ -292,6 +297,9 @@
       color: #00bbb2;
       border-bottom: 1px solid transparent;
       transition: 0.3s;
+      @media (max-width: 400px) {
+         font-size: 16px;
+      }
       &:hover {
          border-bottom: 1px solid rgb(119, 119, 119);
          color: $darkBlueColor;

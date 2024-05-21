@@ -14,7 +14,6 @@ function MessageForm({ isOpen, setOpen, setModal }: { isOpen: boolean; setOpen: 
    const [isTelDirty, setTelDirty] = useState(false);
    const [isQuestionDirty, setQuestionDirty] = useState(false);
 
-   const { executeRecaptcha } = useGoogleReCaptcha();
    const [submit, setSubmit] = useState("");
 
    async function submitForm(e: FormEvent) {
@@ -23,11 +22,6 @@ function MessageForm({ isOpen, setOpen, setModal }: { isOpen: boolean; setOpen: 
       setNameDirty(false);
       setTelDirty(false);
       setQuestionDirty(false);
-      if (!executeRecaptcha) {
-         console.log("not evailable to execute ReCaptcha");
-         return;
-      }
-      const gRecaptchatoken = await executeRecaptcha("inquirySubmit");
       if (name.length < 1 || tel.length < 1 || question.length < 1) {
          if (name.length < 1) setNameDirty(true);
          if (tel.length < 1) setTelDirty(true);

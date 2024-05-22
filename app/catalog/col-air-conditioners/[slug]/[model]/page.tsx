@@ -7,8 +7,8 @@ import { Data } from "../page";
 
 const mainParams = [
    {
-      title: "Inverter Quattro",
-      subtitle: "Технология «Inverter Quattro»",
+      title: "3D Airflow",
+      subtitle: "Технология 3D обдува",
    },
    {
       title: "GMCC",

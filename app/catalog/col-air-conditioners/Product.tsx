@@ -28,9 +28,7 @@ function Product({ element }: Props) {
    const isView = useAppSelector((state) => state.ProductSlice.isLineView);
    return (
       <Link href={`col-air-conditioners/${element.semiIndustrialGroup.url}`} className={styles.item}>
-         <div className={styles.item__title}>
-            {isView ? element.semiIndustrialGroup.type + " " + element.semiIndustrialGroup.name : element.semiIndustrialGroup.name}
-         </div>
+         <div className={styles.item__title}>{element.semiIndustrialGroup.type + " " + element.semiIndustrialGroup.name}</div>
          <div className={`${styles.item__imgBody} ${isView ? styles.item__imgBodyLine : ""}`}>
             <Image src={element.semiIndustrialGroup.image.node.sourceUrl} alt={element.semiIndustrialGroup.name} fill objectFit="contain" />
          </div>

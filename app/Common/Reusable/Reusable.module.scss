@@ -66,6 +66,11 @@
    &:hover {
       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px 0px;
    }
+   &__headerTitle {
+      font-size: 16px;
+      @include textStyle1;
+      text-align: center;
+   }
    &__popular {
       position: absolute;
       right: 15px;
@@ -88,8 +93,8 @@
    &__body {
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
+      height: 100%;
    }
    &__colBody {
       flex-direction: row;
@@ -107,6 +112,7 @@
       flex-direction: column;
       max-width: 350px;
       text-align: center;
+      flex: 1 1 auto;
    }
    &__paramsBody {
       margin: 20px 0 0 0;

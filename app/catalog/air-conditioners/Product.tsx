@@ -24,6 +24,7 @@ function Product({ element }: Props) {
             ""
          )}
          <div className={`${styles.item__body} ${isView ? styles.item__colBody : ""}`}>
+            {!isView && <div className={styles.item__headerTitle}>Инверторный кондиционер</div>}
             <div className={`${styles.item__imgBody} ${isView ? styles.item__imgBodyLine : ""}`}>
                <Image src={element.airCondGroup.image.node.sourceUrl} alt={element.airCondGroup.name} fill objectFit="contain" />
             </div>

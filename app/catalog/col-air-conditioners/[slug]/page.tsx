@@ -50,11 +50,11 @@ export type Data = {
 
 const mainParams: ParamsType[] = [
    {
-      title: "GMCC",
-      description: "Надежный японский компрессор",
+      title: "3D Airflow",
+      description: "Технология 3D обдува",
    },
    {
-      title: "Lov Voltage",
+      title: "Low Voltage",
       description: "Работает при низком напряжении",
    },
 ];

@@ -6,7 +6,11 @@ import MobileTableAircondSemiInd from "./MobileTableAircondSemiInd";
 function Table({ el, slug }: { el: AirCondSemiInner[]; slug: string }) {
    return (
       <div className={`${styles.main__table} ${styles.table}`}>
-         <h3 className={styles.table__title}>Все модели серии {el[0].airCondGroup?.name || el[0].semiIndustrialGroup?.name}, характеристики</h3>
+         <div className={styles.main__titleBody}>
+            <h3 className={styles.table__title}>Все модели серии {el[0].airCondGroup?.name || el[0].semiIndustrialGroup?.name}, характеристики</h3>
+            {el[0].airCondGroup && <div>Бренд: {el[0].airCondGroup?.brand}</div>}
+         </div>
+
          <MobileTableAircondSemiInd el={el} slug={slug} />
          <div className={styles.table__body}>
             <div className={styles.table__row}>

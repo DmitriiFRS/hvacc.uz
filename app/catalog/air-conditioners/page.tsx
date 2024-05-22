@@ -9,6 +9,7 @@ export type DataInner = {
       popular: boolean;
       url: string;
       shortDescription: string;
+      brand: string;
       image: {
          node: {
             sourceUrl: string;
@@ -38,6 +39,7 @@ async function AirCond() {
             popular
             url
             shortDescription
+            brand
             image {
               node {
                 sourceUrl

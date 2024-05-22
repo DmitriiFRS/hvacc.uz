@@ -43,6 +43,7 @@ async function slug({ params }: { params: { slug: string } }) {
             airOutput
             coolingOutput
             energyOutput
+            brand
             freon
             heatOutput
             image {

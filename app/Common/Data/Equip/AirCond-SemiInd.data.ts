@@ -4,6 +4,7 @@ export type AirCondSemiInner = {
       airOutput: string;
       coolingOutput: number;
       energyOutput: string;
+      brand: string;
       freon: string;
       heatOutput: number;
       innerBlock: string;
@@ -44,6 +45,7 @@ export type AirCondSemiInner = {
    };
    airCondGroup?: {
       airOutput: string;
+      brand: string;
       coolingOutput: number;
       energyOutput: string;
       freon: string;

@@ -35,6 +35,7 @@ function Product({ element }: Props) {
                   </div>
                )}
             </div>
+            <div className={styles.item__brand}>Бренд: {element.airCondGroup.brand}</div>
          </div>
       </Link>
    );

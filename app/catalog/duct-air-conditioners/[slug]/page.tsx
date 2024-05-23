@@ -54,8 +54,8 @@ const mainParams: ParamsType[] = [
       description: "Надежный японский компрессор",
    },
    {
-      title: "Таймер",
-      description: "24-часовой таймер на вкл./выкл",
+      title: "Скрытый монтаж",
+      description: "Скрытый монтаж",
    },
 ];
 

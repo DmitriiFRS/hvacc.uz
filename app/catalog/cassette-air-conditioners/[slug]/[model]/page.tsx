@@ -11,8 +11,8 @@ const mainParams = [
       subtitle: "надежный японский компрессор",
    },
    {
-      title: "3D Airflow",
-      subtitle: "Технология 3D обдува",
+      title: "360°",
+      subtitle: "Обдув 360 градусов",
    },
 ];
 

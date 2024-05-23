@@ -2,14 +2,14 @@
 
 import Image from "next/image";
 import styles from "./Main.module.scss";
-import alba from "../../public/img/catalog/Alba.png";
+import alba from "../../public/img/catalog/aircond.jpg";
 import col from "../../public/img/catalog/cols.png";
 import cas from "../../public/img/catalog/semi-industrial.png";
 import duct from "../../public/img/catalog/duct.png";
-import VRF from "../../public/img/catalog/VRF.png";
+import VRF from "../../public/img/catalog/vrf.jpg";
 import rooftop from "../../public/img/catalog/rooftop.png";
-import chiller from "../../public/img/catalog/chiller.png";
-import multi from "../../public/img/catalog/multi.png";
+import chiller from "../../public/img/catalog/chiller.jpg";
+import multi from "../../public/img/catalog/multi.jpg";
 import kkb from "../../public/img/catalog/kkb.png";
 import Link from "next/link";
 
@@ -51,13 +51,13 @@ function Catalog() {
                </Link>
                <Link href={"catalog/vrf"} className={styles.catalog__vrf}>
                   <div className={styles.catalog__itemTitle}>VRF системы</div>
-                  <div className={styles.catalog__imgBody}>
+                  <div className={`${styles.catalog__imgBody} ${styles.catalog__imgBodyHorizontal}`}>
                      <Image src={VRF} alt="VRF системы" fill style={{ objectFit: "contain" }} />
                   </div>
                </Link>
                <Link href={"catalog/chillers"} className={styles.catalog__chillers}>
                   <div className={styles.catalog__itemTitle}>Чиллеры</div>
-                  <div className={styles.catalog__imgBody}>
+                  <div className={`${styles.catalog__imgBody} ${styles.catalog__imgBodyHorizontal}`}>
                      <Image src={chiller} alt="Чиллеры" fill style={{ objectFit: "contain" }} />
                   </div>
                </Link>

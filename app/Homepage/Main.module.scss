@@ -204,6 +204,7 @@
    &__name {
       margin: 30px 0 0 0;
       @include textStyle1;
+      flex: 1 1 auto;
       @media (max-width: 460px) {
          margin: 10px 0 0 0;
       }

@@ -54,8 +54,8 @@ const mainParams: ParamsType[] = [
       description: "Надежный японский компрессор",
    },
    {
-      title: "Low Voltage",
-      description: "Работает при низком напряжении",
+      title: "3D Airflow",
+      description: "Технология 3D обдува",
    },
 ];
 

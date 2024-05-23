@@ -7,12 +7,12 @@ import { Data } from "../page";
 
 const mainParams = [
    {
-      title: "Inverter Quattro",
-      subtitle: "Технология «Inverter Quattro»",
-   },
-   {
       title: "GMCC",
       subtitle: "надежный японский компрессор",
+   },
+   {
+      title: "3D Airflow",
+      subtitle: "Технология 3D обдува",
    },
 ];
 

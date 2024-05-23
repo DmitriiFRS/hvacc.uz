@@ -41,7 +41,6 @@ export default async function Home() {
    return (
       <>
          <Message />
-         <Video />
          <div className={styles.homepage}>
             <Catalog />
             <Banner img={data.data.banners.nodes[0].bannerGroup.image.node.sourceUrl} />

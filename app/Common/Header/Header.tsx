@@ -27,9 +27,14 @@ function Header() {
                   })}
                </ul>
             </nav>
-            <Link aria-label="phone number" target="_blank" href={"tel:+998973336357"} className={styles.header__phone}>
-               +998(97) 333-63-57
-            </Link>
+            <div className={styles.header__phones}>
+               <Link aria-label="phone number" target="_blank" href={"tel:+998771055255"} className={styles.header__phone}>
+                  +998 (77) 105 52 55
+               </Link>
+               <Link aria-label="phone number" target="_blank" href={"tel:+998712005255"} className={styles.header__phone}>
+                  +998 (71) 200 52 55
+               </Link>
+            </div>
          </div>
       </header>
    );

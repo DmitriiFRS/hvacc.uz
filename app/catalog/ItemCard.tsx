@@ -8,13 +8,14 @@ type Props = {
    };
    name: string;
    href: string;
+   className: string;
 };
 
-function ItemCard({ img, name, href }: Props) {
+function ItemCard({ img, name, href, className }: Props) {
    return (
       <Link href={href} className={styles.item}>
-         <div className={styles.item__imgBody}>
-            <Image src={img.src} alt="оборудование" fill objectFit="contain" />
+         <div className={className}>
+            <Image src={img.src} alt="оборудование" fill style={{ objectFit: "contain" }} />
          </div>
          <div className={styles.item__title}>{name}</div>
       </Link>

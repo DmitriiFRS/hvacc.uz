@@ -90,6 +90,9 @@
          &:hover::before {
             width: 240%;
          }
+         @media (max-width: 550px) {
+            font-size: 18px;
+         }
       }
    }
    &__itemTitle {
@@ -99,6 +102,10 @@
    &__aircond {
       grid-area: air;
       height: 100%;
+
+      @media (max-width: 900px) {
+         max-height: 300px;
+      }
    }
    &__colSplit {
       grid-area: col;
@@ -150,6 +157,10 @@
       max-width: 600px;
       max-height: 160px;
       aspect-ratio: 6/2;
+      @media (max-width: 650px) {
+         max-height: 200px;
+         aspect-ratio: 4/2;
+      }
    }
 }
 .popular {

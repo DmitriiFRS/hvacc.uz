@@ -1,15 +1,13 @@
-"use client";
-
 import Image from "next/image";
 import styles from "./Main.module.scss";
-import alba from "../../public/img/catalog/aircond.jpg";
+import alba from "../../public/img/catalog/aircond.png";
 import col from "../../public/img/catalog/cols.png";
 import cas from "../../public/img/catalog/semi-industrial.png";
 import duct from "../../public/img/catalog/duct.png";
-import VRF from "../../public/img/catalog/vrf.jpg";
+import VRF from "../../public/img/catalog/vrf.png";
 import rooftop from "../../public/img/catalog/rooftop.png";
-import chiller from "../../public/img/catalog/chiller.jpg";
-import multi from "../../public/img/catalog/multi.jpg";
+import chiller from "../../public/img/catalog/chiller.png";
+import multi from "../../public/img/catalog/multi.png";
 import kkb from "../../public/img/catalog/kkb.png";
 import Link from "next/link";
 

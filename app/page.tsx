@@ -7,6 +7,7 @@ import fetchGraphql from "./Common/Utilities/FetchGraphql";
 import NewProducts from "./Homepage/NewProducts";
 import Popular from "./Homepage/Popular";
 import Message from "./Homepage/Message";
+import ImageCarousel from "./Homepage/ImageCarousel";
 
 export default async function Home() {
    const data = await fetchGraphql(`
@@ -45,6 +46,7 @@ export default async function Home() {
             <NewProducts />
             <Catalog />
             <Banner img={data.data.banners.nodes[0].bannerGroup.image.node.sourceUrl} />
+            <ImageCarousel />
             <Popular data={data.data.populars.nodes} />
          </div>
       </>

@@ -4,29 +4,18 @@ import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import styles from "./Main.module.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { MdNavigateNext } from "react-icons/md";
-import alba from "../../public/img/homepage/alba.jpg";
-import breez from "../../public/img/homepage/breezeless-slider.jpg";
-import gaia from "../../public/img/homepage/gaia1-slider.jpg";
+import v8 from "../../public/img/homepage/Carousel/carousel-v8.jpg";
+import v8second from "../../public/img/homepage/Carousel/carousel-v82.jpg";
+import ssense from "../../public/img/homepage/Carousel/carousel-v8-supersense.jpg";
+import shieldbox from "../../public/img/homepage/Carousel/carousel-shieldBox.jpg";
+import mcity from "../../public/img/homepage/Carousel/carousel-mcity.jpg";
+import v6 from "../../public/img/homepage/Carousel/carousel-v6.jpg";
 import Image from "next/image";
 import "swiper/css/pagination";
-import Link from "next/link";
 
-const sliderData = [
-   {
-      img: alba,
-      link: "catalog/vrf/outer",
-   },
-   {
-      img: breez,
-      link: "catalog/chillers/magboost",
-   },
-   {
-      img: gaia,
-      link: "catalog/vrf/outer",
-   },
-];
+const sliderData = [v8, v8second, ssense, shieldbox, mcity, v6];
 
-function NewProducts() {
+function ImageCarousel() {
    return (
       <div className={styles.new}>
          <Swiper
@@ -34,7 +23,7 @@ function NewProducts() {
             slidesPerView={1}
             loop
             autoplay={{
-               delay: 4000,
+               delay: 3000,
                pauseOnMouseEnter: true,
             }}
             navigation={{
@@ -58,7 +47,7 @@ function NewProducts() {
                   <SwiperSlide key={index}>
                      <div className={styles.new__slideContainer}>
                         <div className={styles.new__imgBody}>
-                           <Image src={el.img} alt="новинки" fill style={{ objectFit: "cover" }} priority={true} quality={100} />
+                           <Image src={el} alt="новинки" fill style={{ objectFit: "cover" }} priority={true} quality={100} />
                         </div>
                      </div>
                   </SwiperSlide>
@@ -68,4 +57,4 @@ function NewProducts() {
       </div>
    );
 }
-export default NewProducts;
+export default ImageCarousel;

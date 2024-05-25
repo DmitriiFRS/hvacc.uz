@@ -1,11 +1,11 @@
 "use client";
 
-import { Navigation, Pagination } from "swiper/modules";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import styles from "./Main.module.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { MdNavigateNext } from "react-icons/md";
 import magboost from "../../public/img/homepage/alba.jpg";
-import v8 from "../../public/img/homepage/alba.jpg";
+import v8 from "../../public/img/homepage/breezeless-slider.jpg";
 import Image from "next/image";
 import "swiper/css/pagination";
 import Link from "next/link";
@@ -28,6 +28,10 @@ function NewProducts() {
             className={styles.new__swiper}
             slidesPerView={1}
             loop
+            autoplay={{
+               delay: 4000,
+               pauseOnMouseEnter: true,
+            }}
             navigation={{
                nextEl: ".new-slider-next",
                prevEl: ".new-slider-prev",
@@ -35,7 +39,7 @@ function NewProducts() {
             pagination={{
                clickable: true,
             }}
-            modules={[Navigation, Pagination]}
+            modules={[Navigation, Pagination, Autoplay]}
          >
             <button aria-label="next-slide" className="new-slider-next">
                <MdNavigateNext />

@@ -4,8 +4,8 @@ import { Navigation, Pagination } from "swiper/modules";
 import styles from "./Main.module.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { MdNavigateNext } from "react-icons/md";
-import magboost from "../../public/img/homepage/magboost.webp";
-import v8 from "../../public/img/homepage/v8.jpg";
+import magboost from "../../public/img/homepage/alba.jpg";
+import v8 from "../../public/img/homepage/alba.jpg";
 import Image from "next/image";
 import "swiper/css/pagination";
 import Link from "next/link";
@@ -13,17 +13,10 @@ import Link from "next/link";
 const sliderData = [
    {
       img: v8,
-      title: "Серия VRF систем V8",
-      subtitle1: "Наружные блоки нового поколения VRF-системы серии V8 представлены блоками модульного и индивидуального исполнения от 25,2 до 112 кВт.",
-      subtitle2:
-         "В одну систему можно объединять до трех модулей, таким образом максимальная холодопроизводительность составит 336 кВт. VRF-система сочетает в себе такие инновационные технологии как HyperLink, ShieldBox, SuperSense.",
       link: "catalog/vrf/outer",
    },
    {
       img: magboost,
-      title: "Серия чиллеров Magboost",
-      subtitle1: "Центробежный чиллер с магнитным валом MagBoost - это новейшее поколение чиллеров",
-      subtitle2: "Серия предоставляет безмаслянную, высокоэффективную, стабильную, надёжную и бесшумную работу в широком диапазоне мощностей",
       link: "catalog/chillers/magboost",
    },
 ];
@@ -57,18 +50,6 @@ function NewProducts() {
                      <div className={styles.new__slideContainer}>
                         <div className={styles.new__imgBody}>
                            <Image src={el.img} alt="новинки" fill style={{ objectFit: "cover" }} />
-                        </div>
-                        <div className={styles.new__descriptions}>
-                           <div className={styles.new__titleBody}>
-                              <h3 className={styles.new__title}>{el.title}</h3>
-                              <p>{el.subtitle1}</p>
-                              <p>{el.subtitle2}</p>
-                           </div>
-                           <div className={styles.new__btn}>
-                              <Link href={el.link}>
-                                 <span>Подробнее</span>
-                              </Link>
-                           </div>
                         </div>
                      </div>
                   </SwiperSlide>

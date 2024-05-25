@@ -42,9 +42,9 @@ export default async function Home() {
       <>
          <Message />
          <div className={styles.homepage}>
+            <NewProducts />
             <Catalog />
             <Banner img={data.data.banners.nodes[0].bannerGroup.image.node.sourceUrl} />
-            <NewProducts />
             <Popular data={data.data.populars.nodes} />
          </div>
       </>

@@ -4,7 +4,7 @@ import alba from "../../public/img/catalog/aircond.png";
 import col from "../../public/img/catalog/cols.png";
 import cas from "../../public/img/catalog/semi-industrial.png";
 import duct from "../../public/img/catalog/duct.png";
-import VRF from "../../public/img/catalog/vrf.png";
+import VRF from "../../public/img/catalog/vrfs.png";
 import rooftop from "../../public/img/catalog/rooftop.png";
 import chiller from "../../public/img/catalog/chiller.png";
 import multi from "../../public/img/catalog/multi.png";

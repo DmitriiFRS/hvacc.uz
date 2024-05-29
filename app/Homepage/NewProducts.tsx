@@ -7,6 +7,8 @@ import { MdNavigateNext } from "react-icons/md";
 import alba from "../../public/img/homepage/alba.jpg";
 import breez from "../../public/img/homepage/breezeless-slider.jpg";
 import gaia from "../../public/img/homepage/gaia1-slider.jpg";
+import breezM from "../../public/img/homepage/breez-mobile.jpg";
+import albaM from "../../public/img/homepage/alba-mobile.jpg";
 import Image from "next/image";
 import "swiper/css/pagination";
 import Link from "next/link";
@@ -14,14 +16,17 @@ import Link from "next/link";
 const sliderData = [
    {
       img: alba,
+      mobileImg: albaM,
       link: "catalog/air-conditioners/alba",
    },
    {
       img: breez,
+      mobileImg: breezM,
       link: "catalog/air-conditioners/breezeless",
    },
    {
       img: gaia,
+      mobileImg: gaia,
       link: "catalog/air-conditioners/gaia",
    },
 ];
@@ -59,6 +64,9 @@ function NewProducts() {
                      <Link href={el.link} className={styles.new__slideContainer}>
                         <div className={styles.new__imgBody}>
                            <Image src={el.img} alt="новинки" fill style={{ objectFit: "cover", objectPosition: "right" }} priority={true} quality={100} />
+                        </div>
+                        <div className={`${styles.new__imgBodyMobile}`}>
+                           <Image src={el.mobileImg} alt="новинки" fill style={{ objectFit: "cover" }} priority={true} quality={100} />
                         </div>
                      </Link>
                   </SwiperSlide>

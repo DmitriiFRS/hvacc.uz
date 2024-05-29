@@ -14,15 +14,15 @@ import Link from "next/link";
 const sliderData = [
    {
       img: alba,
-      link: "catalog/vrf/outer",
+      link: "catalog/air-conditioners/alba",
    },
    {
       img: breez,
-      link: "catalog/chillers/magboost",
+      link: "catalog/air-conditioners/breezeless",
    },
    {
       img: gaia,
-      link: "catalog/vrf/outer",
+      link: "catalog/air-conditioners/gaia",
    },
 ];
 
@@ -56,11 +56,11 @@ function NewProducts() {
             {sliderData.map((el, index) => {
                return (
                   <SwiperSlide key={index}>
-                     <div className={styles.new__slideContainer}>
+                     <Link href={el.link} className={styles.new__slideContainer}>
                         <div className={styles.new__imgBody}>
                            <Image src={el.img} alt="новинки" fill style={{ objectFit: "cover" }} priority={true} quality={100} />
                         </div>
-                     </div>
+                     </Link>
                   </SwiperSlide>
                );
             })}

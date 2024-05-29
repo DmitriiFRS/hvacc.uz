@@ -55,7 +55,7 @@ function Footer() {
                         aria-label="facebook"
                         target="_blank"
                      >
-                        <FaFacebookF color="#888888" size={35} />
+                        <FaFacebookF style={{ color: "inherit" }} size={35} />
                      </Link>
                      <Link
                         className={styles.footer__icon}
@@ -63,10 +63,10 @@ function Footer() {
                         aria-label="instagram"
                         target="_blank"
                      >
-                        <CiInstagram color="#888888" size={35} />
+                        <CiInstagram style={{ color: "inherit" }} size={35} />
                      </Link>
                      <Link className={styles.footer__icon} href={"https://t.me/+WAsOhLwBNixjODNi"} aria-label="telegram" target="_blank">
-                        <FaTelegramPlane color="#888888" size={35} />
+                        <FaTelegramPlane style={{ color: "inherit" }} size={35} />
                      </Link>
                   </div>
                </div>

@@ -58,7 +58,7 @@ function NewProducts() {
                   <SwiperSlide key={index}>
                      <Link href={el.link} className={styles.new__slideContainer}>
                         <div className={styles.new__imgBody}>
-                           <Image src={el.img} alt="новинки" fill style={{ objectFit: "cover" }} priority={true} quality={100} />
+                           <Image src={el.img} alt="новинки" fill style={{ objectFit: "cover", objectPosition: "right" }} priority={true} quality={100} />
                         </div>
                      </Link>
                   </SwiperSlide>

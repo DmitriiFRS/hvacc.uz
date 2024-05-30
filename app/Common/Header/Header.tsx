@@ -1,6 +1,6 @@
 import styles from "./Header.module.scss";
 import Image from "next/image";
-import logo from "../../../public/icons/MideaLogo.png";
+import logo from "../../../public/icons/hvacc-logo.png";
 import Link from "next/link";
 import { nav } from "../Data/Nav.data";
 import Mobile from "./Mobile";

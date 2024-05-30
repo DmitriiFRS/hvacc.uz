@@ -1,5 +1,5 @@
 import styles from "./Footer.module.scss";
-import logo from "../../../public/icons/MideaLogo.png";
+import logo from "../../../public/icons/hvacc-logo-black.png";
 import Image from "next/image";
 import Link from "next/link";
 import { FiPhone } from "react-icons/fi";
@@ -38,8 +38,14 @@ function Footer() {
                   <h4 className={styles.footer__navTitle}>Контакты</h4>
                   <div className={styles.footer__navBody}>
                      <FiPhone size={20} />
-                     <Link aria-label="phone" target="_blank" href={"tel:+998973336357"} style={{ color: "inherit" }} className={styles.footer__phone}>
-                        +998(97) 333-63-57{" "}
+                     <Link aria-label="phone" target="_blank" href={"tel:+998771055255"} style={{ color: "inherit" }} className={styles.footer__phone}>
+                        +998 (77) 105 52 55
+                     </Link>
+                  </div>
+                  <div className={styles.footer__navBody}>
+                     <FiPhone size={20} />
+                     <Link aria-label="phone" target="_blank" href={"tel:+998712005255"} style={{ color: "inherit" }} className={styles.footer__phone}>
+                        +998 (71) 200 52 55
                      </Link>
                   </div>
                   <div className={styles.footer__navBody}>

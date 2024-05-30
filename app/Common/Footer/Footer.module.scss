@@ -61,6 +61,11 @@
       color: #3f3f3f;
       font-weight: 500;
       align-items: center;
+      transition: 0.3s;
+      &:hover {
+         color: #000000;
+         transform: scale(1.05);
+      }
    }
    &__phone {
       margin: 0 0 0 10px;

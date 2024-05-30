@@ -4,16 +4,23 @@ import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import styles from "./Main.module.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { MdNavigateNext } from "react-icons/md";
-import v8 from "../../public/img/homepage/Carousel/carousel-v8.jpg";
-import v8second from "../../public/img/homepage/Carousel/carousel-v82.jpg";
-import ssense from "../../public/img/homepage/Carousel/carousel-v8-supersense.jpg";
-import shieldbox from "../../public/img/homepage/Carousel/carousel-shieldBox.jpg";
-import mcity from "../../public/img/homepage/Carousel/carousel-mcity.jpg";
-import v6 from "../../public/img/homepage/Carousel/carousel-v6.jpg";
+import v8 from "../../public/img/homepage/Carousel/v8pc.png";
+import v8M from "../../public/img/homepage/Carousel/v8-mobile.png";
+import magboost from "../../public/img/homepage/Carousel/magboostpc.png";
+import magboostM from "../../public/img/homepage/Carousel/magboost-mobile.png";
 import Image from "next/image";
 import "swiper/css/pagination";
 
-const sliderData = [v8, v8second, ssense, shieldbox, mcity, v6];
+const sliderData = [
+   {
+      img: v8,
+      mobileImg: v8M,
+   },
+   {
+      img: magboost,
+      mobileImg: magboostM,
+   },
+];
 
 function ImageCarousel() {
    return (
@@ -46,8 +53,11 @@ function ImageCarousel() {
                return (
                   <SwiperSlide key={index}>
                      <div className={styles.new__slideContainer}>
-                        <div className={styles.new__imgBody}>
-                           <Image src={el} alt="новинки" fill style={{ objectFit: "cover" }} priority={true} quality={100} />
+                        <div className={styles.new__imgBody2}>
+                           <Image src={el.img} alt="новинки" fill style={{ objectFit: "cover" }} priority={true} quality={100} />
+                        </div>
+                        <div className={`${styles.new__imgBodyMobile2}`}>
+                           <Image src={el.mobileImg} alt="новинки" fill style={{ objectFit: "cover" }} priority={true} quality={100} />
                         </div>
                      </div>
                   </SwiperSlide>

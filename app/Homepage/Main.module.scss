@@ -377,13 +377,31 @@
    &__imgBody {
       position: relative;
       flex: 0 1 100%;
-      height: 650px;
+      height: 600px;
+      @media (max-width: 1700px) {
+         height: 500px;
+      }
+      @media (max-width: 1450px) {
+         height: 450px;
+      }
+      @media (max-width: 1450px) {
+         height: 450px;
+      }
+      @media (max-width: 1300px) {
+         height: 400px;
+      }
       @media (max-width: 1150px) {
          flex: 1 1 auto;
          width: 100%;
-         height: 400px;
+         height: 350px;
       }
-      @media (max-width: 600px) {
+      @media (max-width: 900px) {
+         height: 300px;
+      }
+      @media (max-width: 800px) {
+         height: 250px;
+      }
+      @media (max-width: 700px) {
          display: none;
       }
    }
@@ -395,10 +413,82 @@
       @media (max-width: 1150px) {
          flex: 1 1 auto;
          width: 100%;
-         height: 350px;
+      }
+      @media (max-width: 700px) {
+         display: block;
       }
       @media (max-width: 600px) {
+         height: 500px;
+      }
+      @media (max-width: 470px) {
+         height: 450px;
+      }
+      @media (max-width: 430px) {
+         height: 400px;
+      }
+      @media (max-width: 380px) {
+         height: 360px;
+      }
+   }
+   &__imgBody2 {
+      position: relative;
+      flex: 0 1 100%;
+      height: 600px;
+      @media (max-width: 1680px) {
+         height: 520px;
+      }
+      @media (max-width: 1460px) {
+         height: 450px;
+      }
+      @media (max-width: 1260px) {
+         height: 400px;
+      }
+      @media (max-width: 1150px) {
+         flex: 1 1 auto;
+         width: 100%;
+      }
+      @media (max-width: 1100px) {
+         height: 350px;
+      }
+      @media (max-width: 990px) {
+         height: 300px;
+      }
+      @media (max-width: 800px) {
+         height: 250px;
+      }
+      @media (max-width: 700px) {
+         display: none;
+      }
+   }
+   &__imgBodyMobile2 {
+      position: relative;
+      flex: 0 1 100%;
+      height: 650px;
+      display: none;
+      @media (max-width: 1150px) {
+         flex: 1 1 auto;
+         width: 100%;
+      }
+      @media (max-width: 700px) {
          display: block;
+      }
+      @media (max-width: 600px) {
+         height: 550px;
+      }
+      @media (max-width: 520px) {
+         height: 500px;
+      }
+      @media (max-width: 470px) {
+         height: 450px;
+      }
+      @media (max-width: 430px) {
+         height: 400px;
+      }
+      @media (max-width: 380px) {
+         height: 370px;
+      }
+      @media (max-width: 350px) {
+         height: 340px;
       }
    }
    &__descriptions {

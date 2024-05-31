@@ -17,7 +17,9 @@ function ItemCard({ img, name, href, className }: Props) {
          <div className={className}>
             <Image src={img.src} alt="оборудование" fill style={{ objectFit: "contain" }} />
          </div>
-         <div className={styles.item__title}>{name}</div>
+         <div className={styles.item__title}>
+            <span>{name}</span>
+         </div>
       </Link>
    );
 }

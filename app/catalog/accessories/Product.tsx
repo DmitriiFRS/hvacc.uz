@@ -5,7 +5,7 @@ import Image from "next/image";
 
 function Product({ element }: { element: DataInner }) {
    return (
-      <Link href={`accessories/${element.accesoriesGroup.uri}`} className={styles.item}>
+      <Link href={`accessories/${element.accesoriesGroup.uri}`} className={`${styles.item} ${styles.item__accessories}`}>
          <div className={`${styles.item__imgBody}`}>
             <Image src={element.accesoriesGroup.image.node.sourceUrl} alt={element.accesoriesGroup.name} fill objectFit="contain" />
          </div>

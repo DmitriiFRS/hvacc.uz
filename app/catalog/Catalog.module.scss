@@ -36,6 +36,26 @@
    align-items: center;
    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
    transition: 0.25s;
+   overflow: hidden;
+   position: relative;
+   &::before {
+      content: "";
+      position: absolute;
+      background: #e0fdff;
+      left: -50%;
+      top: 0;
+      width: 0%;
+      height: 100%;
+      transform: skew(45deg);
+      transition: 0.3s;
+   }
+   &:hover:before {
+      width: 205%;
+   }
+   & span {
+      position: relative;
+      z-index: 2;
+   }
    @media (max-width: 990px) {
       padding: 20px 10px;
    }

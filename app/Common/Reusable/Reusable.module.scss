@@ -54,6 +54,34 @@
    transition: 0.25s;
    position: relative;
    height: 100%;
+   overflow: hidden;
+   position: relative;
+   &::before {
+      content: "";
+      position: absolute;
+      background: #e0fdff;
+      left: -50%;
+      top: 0;
+      width: 0%;
+      height: 100%;
+      transform: skew(45deg);
+      transition: 0.3s;
+   }
+   &:hover:before {
+      width: 205%;
+   }
+   & span {
+      position: relative;
+      z-index: 2;
+   }
+   &__accessories {
+      &::before {
+         left: -80%;
+      }
+      &:hover:before {
+         width: 255%;
+      }
+   }
    @media (max-width: 560px) {
       padding: 10px;
    }
@@ -95,6 +123,8 @@
       flex-direction: column;
       align-items: center;
       height: 100%;
+      position: relative;
+      z-index: 2;
    }
    &__colBody {
       flex-direction: row;
@@ -133,10 +163,14 @@
       @include textStyle1;
       font-size: 22px;
       flex: 1 1 auto;
+      position: relative;
+      z-index: 2;
    }
    &__inverter {
       margin: 20px 0 0 0;
       @include textStyle1;
+      position: relative;
+      z-index: 2;
    }
    &__params {
       & li {
@@ -167,5 +201,7 @@
       font-size: 15px;
       font-weight: 600;
       transition: 0.25s;
+      position: relative;
+      z-index: 2;
    }
 }

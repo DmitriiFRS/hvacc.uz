@@ -27,6 +27,26 @@
       align-items: center;
       transition: 0.25s;
       border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+      &::before {
+         content: "";
+         position: absolute;
+         background: #e0fdff;
+         left: -50%;
+         top: 0;
+         width: 0%;
+         height: 100%;
+         transform: skew(45deg);
+         transition: 0.3s;
+      }
+      &:hover:before {
+         width: 205%;
+      }
+      & span {
+         position: relative;
+         z-index: 2;
+      }
       @media (max-width: 600px) {
          padding: 10px;
       }
@@ -54,6 +74,8 @@
    &__itemTitle {
       @include textStyle1;
       font-size: 24px;
+      z-index: 2;
+      position: relative;
       @media (max-width: 600px) {
          font-size: 18px;
       }
